@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welliton Scheer – Resume</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    
+
     :root {
       /* Professional Navy/Slate Color Palette */
       --primary-dark: #1e293b;
@@ -27,17 +29,17 @@
       --glass-bg: rgba(255, 255, 255, 0.1);
       --glass-border: rgba(255, 255, 255, 0.2);
     }
-    
+
     * {
       font-family: 'Inter', sans-serif;
     }
-    
+
     body {
       background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 50%, var(--primary-light) 100%);
       min-height: 100vh;
       overflow-x: hidden;
     }
-    
+
     #three-canvas {
       position: fixed;
       top: 0;
@@ -47,13 +49,13 @@
       z-index: -1;
       opacity: 0.8;
     }
-    
+
     .content {
       position: relative;
       z-index: 1;
       animation: fadeInUp 1s ease-out;
     }
-    
+
     .glass-effect {
       backdrop-filter: blur(20px);
       background: var(--glass-bg);
@@ -61,7 +63,7 @@
       box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
       border-radius: 20px;
     }
-    
+
     .project-card {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
@@ -73,7 +75,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .project-card::before {
       content: '';
       position: absolute;
@@ -84,17 +86,17 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       transition: left 0.5s;
     }
-    
+
     .project-card:hover::before {
       left: 100%;
     }
-    
+
     .project-card:hover {
       transform: translateY(-5px) scale(1.02);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
       border-color: rgba(255, 255, 255, 0.3);
     }
-    
+
     .skill-tag {
       display: inline-block;
       background: linear-gradient(45deg, var(--accent-navy), var(--accent-dark-navy));
@@ -107,19 +109,19 @@
       transition: all 0.3s ease;
       cursor: pointer;
     }
-    
+
     .skill-tag:hover {
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(30, 64, 175, 0.4);
       background: linear-gradient(45deg, var(--accent-blue), var(--accent-navy));
     }
-    
+
     .section-title {
       color: var(--text-primary);
       position: relative;
       display: inline-block;
     }
-    
+
     .section-title::after {
       content: '';
       position: absolute;
@@ -130,23 +132,23 @@
       background: linear-gradient(45deg, var(--accent-navy), var(--accent-dark-navy));
       transition: width 0.3s ease;
     }
-    
+
     .section-title:hover::after {
       width: 100%;
     }
-    
+
     .floating-icon {
       animation: float 3s ease-in-out infinite;
       display: inline-block;
     }
-    
+
     .typing-effect {
       overflow: hidden;
       border-right: 3px solid;
       white-space: nowrap;
       animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
     }
-    
+
     .progress-bar {
       width: 100%;
       height: 8px;
@@ -155,40 +157,60 @@
       overflow: hidden;
       margin-top: 0.5rem;
     }
-    
+
     .progress-fill {
       height: 100%;
       background: linear-gradient(45deg, var(--accent-navy), var(--accent-dark-navy));
       border-radius: 4px;
       transition: width 2s ease-in-out;
     }
-    
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    
+
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
-    
+
     @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
     }
-    
+
     @keyframes blink {
-      from, to { border-color: transparent; }
-      50% { border-color: var(--accent-navy); }
+
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: var(--accent-navy);
+      }
     }
-    
+
     .contact-link {
       display: inline-block;
       padding: 0.5rem 1rem;
@@ -200,14 +222,14 @@
       margin: 0.25rem;
       transition: all 0.3s ease;
     }
-    
+
     .contact-link:hover {
       background: var(--glass-border);
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);
       border-color: var(--accent-navy);
     }
-    
+
     .header-gradient {
       background: linear-gradient(135deg, var(--glass-bg), rgba(255, 255, 255, 0.05));
       border-radius: 15px;
@@ -216,7 +238,7 @@
       text-align: center;
       border: 1px solid var(--glass-border);
     }
-    
+
     .name-title {
       background: linear-gradient(45deg, var(--text-primary), var(--text-secondary));
       -webkit-background-clip: text;
@@ -227,302 +249,327 @@
     }
   </style>
 </head>
+
 <body class="bg-gray-100 text-gray-800 p-6">
   <canvas id="three-canvas"></canvas>
   <div class="content">
     <div class="max-w-3xl mx-auto glass-effect p-8 rounded-lg shadow-2xl">
-    <!-- Header -->
-    <header class="header-gradient">
-      <h1 class="text-5xl name-title mb-4">Welliton Scheer</h1>
-      <p class="text-xl text-white mb-4 typing-effect">Full-Stack Software Developer</p>
-      <p class="text-white mb-6">📍 Três de Maio, RS, Brazil</p>
-      <div class="flex justify-center space-x-4">
-        <a href="https://github.com/wellitonscheer" class="contact-link floating-icon">
-          <span class="mr-2">🔗</span>GitHub
-        </a>
-        <a href="https://linkedin.com/in/welliton-scheer" class="contact-link floating-icon">
-          <span class="mr-2">💼</span>LinkedIn
-        </a>
-        <a href="mailto:wellitonscheer@gmail.com" class="contact-link floating-icon">
-          <span class="mr-2">📧</span>Email
-        </a>
-      </div>
-    </header>
+      <!-- Header -->
+      <header class="header-gradient">
+        <h1 class="text-5xl name-title mb-4">Welliton Scheer</h1>
+        <p class="text-xl text-white mb-4 typing-effect">Full-Stack Software Developer</p>
+        <p class="text-white mb-6"><i class="fas fa-map-marker-alt mr-2"></i>Três de Maio, RS, Brazil</p>
+        <div class="flex justify-center space-x-4">
+          <a href="https://github.com/wellitonscheer" class="contact-link floating-icon">
+            <i class="fab fa-github mr-2"></i>GitHub
+          </a>
+          <a href="https://linkedin.com/in/welliton-scheer" class="contact-link floating-icon">
+            <i class="fab fa-linkedin mr-2"></i>LinkedIn
+          </a>
+          <a href="mailto:wellitonscheer@gmail.com" class="contact-link floating-icon">
+            <i class="fas fa-envelope mr-2"></i>Email
+          </a>
+        </div>
+      </header>
 
-    <!-- About -->
-    <section class="mb-8">
-      <h2 class="text-3xl font-bold mb-4 section-title">🚀 About Me</h2>
-      <div class="project-card">
-        <p class="text-white text-lg leading-relaxed">Software Developer with academic training from <strong>PUCRS</strong> and professional experience at <strong>Setrem</strong>. I specialize in full-stack web development, developer experience optimization, and AI integration using modern technologies like Go, TypeScript, and Python. Passionate about solving real-world problems through clean architecture, automation, and innovative solutions.</p>
-      </div>
-    </section>
+      <!-- About -->
+      <section class="mb-8">
+        <h2 class="text-3xl font-bold mb-4 section-title"><i class="fas fa-user mr-3"></i>About Me</h2>
+        <div class="project-card">
+          <p class="text-white text-lg leading-relaxed">Software Developer with academic training from
+            <strong>PUCRS</strong> and professional experience at <strong>Setrem</strong>. I specialize in full-stack
+            web development, developer experience optimization, and AI integration using modern technologies like Go,
+            TypeScript, and Python. Passionate about solving real-world problems through clean architecture, automation,
+            and innovative solutions.</p>
+        </div>
+      </section>
 
-    <!-- Technical Skills -->
-    <section class="mb-8">
-      <h2 class="text-3xl font-bold mb-4 section-title">⚡ Technical Expertise</h2>
-      <div class="project-card">
-        <div class="mb-4">
-          <h3 class="text-lg font-semibold text-white mb-2">Languages</h3>
-          <div class="flex flex-wrap">
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">Go</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Rust</span>
-          </div>
-        </div>
-        <div class="mb-4">
-          <h3 class="text-lg font-semibold text-white mb-2">Frameworks & Libraries</h3>
-          <div class="flex flex-wrap">
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Turborepo</span>
-            <span class="skill-tag">HTMX</span>
-            <span class="skill-tag">Tailwind CSS</span>
-          </div>
-        </div>
-        <div class="mb-4">
-          <h3 class="text-lg font-semibold text-white mb-2">Databases & Storage</h3>
-          <div class="flex flex-wrap">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Prisma ORM</span>
-            <span class="skill-tag">PgVector</span>
-          </div>
-        </div>
-        <div class="mb-4">
-          <h3 class="text-lg font-semibold text-white mb-2">Infrastructure & DevOps</h3>
-          <div class="flex flex-wrap">
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">RabbitMQ</span>
-            <span class="skill-tag">Microservices</span>
-            <span class="skill-tag">CI/CD</span>
-          </div>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold text-white mb-2">Specialized Tools</h3>
-          <div class="flex flex-wrap">
-            <span class="skill-tag">AI/ML Integration</span>
-            <span class="skill-tag">RAG Systems</span>
-            <span class="skill-tag">PDF Generation</span>
-            <span class="skill-tag">Semantic Search</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="mb-8">
-      <h2 class="text-3xl font-bold mb-6 section-title">💼 Key Projects</h2>
-      
-      <div class="project-card">
-        <div class="flex items-center mb-3">
-          <span class="text-3xl mr-3">🎯</span>
-          <h3 class="text-2xl font-bold text-white">Setrem Eventos</h3>
-        </div>
-        <p class="text-gray-200 mb-4 text-lg">Comprehensive event management system with real-time processing, automated backups, and webhook handling for seamless integration.</p>
-        <div class="mb-3">
-          <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag text-sm">Next.js</span>
-            <span class="skill-tag text-sm">TypeScript</span>
-            <span class="skill-tag text-sm">PostgreSQL</span>
-            <span class="skill-tag text-sm">Docker</span>
-            <span class="skill-tag text-sm">RabbitMQ</span>
-            <span class="skill-tag text-sm">Prisma</span>
-            <span class="skill-tag text-sm">Turborepo</span>
-          </div>
-        </div>
-        <div class="text-sm text-gray-300">
-          <p><strong>Architecture:</strong> Microservices for dashboard, queues, webhooks, and backups</p>
-          <p><strong>Role:</strong> Full-stack developer</p>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="flex items-center mb-3">
-          <span class="text-3xl mr-3">📚</span>
-          <h3 class="text-2xl font-bold text-white">Setrem Matrículas</h3>
-        </div>
-        <p class="text-gray-200 mb-4 text-lg">Advanced student registration system for academic institutions with streamlined enrollment processes.</p>
-        <div class="text-sm text-gray-300">
-          <p><strong>Architecture:</strong> Similar stack and architecture to Setrem Eventos</p>
-          <p><strong>Role:</strong> Lead developer</p>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="flex items-center mb-3">
-          <span class="text-3xl mr-3">💳</span>
-          <h3 class="text-2xl font-bold text-white">Proxy Pagamentos</h3>
-        </div>
-        <p class="text-gray-200 mb-4 text-lg">Secure payment gateway proxy system handling financial transactions with enterprise-grade security.</p>
-        <div class="mb-3">
-          <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag text-sm">TypeScript</span>
-            <span class="skill-tag text-sm">PostgreSQL</span>
-            <span class="skill-tag text-sm">RabbitMQ</span>
-            <span class="skill-tag text-sm">Docker</span>
-          </div>
-        </div>
-        <div class="text-sm text-gray-300">
-          <p><strong>Role:</strong> Backend developer</p>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="flex items-center mb-3">
-          <span class="text-3xl mr-3">🎫</span>
-          <h3 class="text-2xl font-bold text-white">Ticket Helper</h3>
-        </div>
-        <p class="text-gray-200 mb-4 text-lg">AI-powered support ticket manager with semantic search capabilities and Chrome browser integration.</p>
-        <div class="mb-3">
-          <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag text-sm">Go</span>
-            <span class="skill-tag text-sm">PostgreSQL</span>
-            <span class="skill-tag text-sm">PgVector</span>
-            <span class="skill-tag text-sm">Docker</span>
-            <span class="skill-tag text-sm">HTMX</span>
-          </div>
-        </div>
-        <div class="text-sm text-gray-300">
-          <p><strong>Role:</strong> Full-stack Go developer</p>
-          <p><strong>Features:</strong> Natural language search, RAG, semantic similarity, email notifications, secure access</p>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="flex items-center mb-3">
-          <span class="text-3xl mr-3">🌐</span>
-          <h3 class="text-2xl font-bold text-white">Rede Social CTI 2023</h3>
-        </div>
-        <p class="text-gray-200 mb-4 text-lg">Modern social networking application built with cutting-edge web technologies and monorepo architecture.</p>
-        <div class="mb-3">
-          <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag text-sm">Next.js</span>
-            <span class="skill-tag text-sm">TypeScript</span>
-            <span class="skill-tag text-sm">Turborepo</span>
-          </div>
-        </div>
-        <div class="text-sm text-gray-300">
-          <p><strong>Role:</strong> Frontend/full-stack developer</p>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="flex items-center mb-3">
-          <span class="text-3xl mr-3">⚙️</span>
-          <h3 class="text-2xl font-bold text-white">Rust Assembly Experiments</h3>
-        </div>
-        <p class="text-gray-200 mb-4 text-lg">Experimental projects combining Rust and assembly to explore low-level programming concepts and system optimization.</p>
-        <div class="text-sm text-gray-300">
-          <p><strong>Focus:</strong> Learning systems programming, performance optimization, and low-level concepts</p>
-          <p><strong>Role:</strong> Experimental developer exploring systems programming</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contributions -->
-    <section class="mb-8">
-      <h2 class="text-3xl font-bold mb-6 section-title">✨ Key Contributions</h2>
-      <div class="project-card">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
-            <span class="text-2xl mr-3">🏢</span>
-            <div>
-              <h4 class="text-white font-semibold">Microservices Architecture</h4>
-              <p class="text-gray-300 text-sm">Scalable, modular backend systems</p>
+      <!-- Technical Skills -->
+      <section class="mb-8">
+        <h2 class="text-3xl font-bold mb-4 section-title"><i class="fas fa-code mr-3"></i>Technical Expertise</h2>
+        <div class="project-card">
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Languages</h3>
+            <div class="flex flex-wrap">
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Go</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Rust</span>
             </div>
           </div>
-          <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
-            <span class="text-2xl mr-3">🔄</span>
-            <div>
-              <h4 class="text-white font-semibold">Full-Stack Development</h4>
-              <p class="text-gray-300 text-sm">End-to-end application delivery</p>
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Frameworks & Libraries</h3>
+            <div class="flex flex-wrap">
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Turborepo</span>
+              <span class="skill-tag">HTMX</span>
+              <span class="skill-tag">Tailwind CSS</span>
             </div>
           </div>
-          <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
-            <span class="text-2xl mr-3">⚙️</span>
-            <div>
-              <h4 class="text-white font-semibold">DevOps Integration</h4>
-              <p class="text-gray-300 text-sm">CI/CD with Docker and automation</p>
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Databases & Storage</h3>
+            <div class="flex flex-wrap">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Prisma ORM</span>
+              <span class="skill-tag">PgVector</span>
             </div>
           </div>
-          <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
-            <span class="text-2xl mr-3">🤖</span>
-            <div>
-              <h4 class="text-white font-semibold">AI Integration</h4>
-              <p class="text-gray-300 text-sm">Semantic search, RAG, similarity detection</p>
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold text-white mb-2">Infrastructure & DevOps</h3>
+            <div class="flex flex-wrap">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">RabbitMQ</span>
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">CI/CD</span>
             </div>
           </div>
-          <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
-            <span class="text-2xl mr-3">🎓</span>
-            <div>
-              <h4 class="text-white font-semibold">Educational Tools</h4>
-              <p class="text-gray-300 text-sm">Student and event management platforms</p>
-            </div>
-          </div>
-          <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
-            <span class="text-2xl mr-3">💳</span>
-            <div>
-              <h4 class="text-white font-semibold">Payment Systems</h4>
-              <p class="text-gray-300 text-sm">Secure financial data flow and routing</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience & Education -->
-    <section class="mb-8">
-      <h2 class="text-3xl font-bold mb-6 section-title">💼 Experience & Education</h2>
-      
-      <div class="project-card mb-4">
-        <div class="flex items-center mb-3">
-          <span class="text-3xl mr-3">🏢</span>
           <div>
-            <h3 class="text-xl font-bold text-white">Setrem – Sociedade Educacional Três de Maio</h3>
-            <p class="text-gray-300">Software Developer</p>
+            <h3 class="text-lg font-semibold text-white mb-2">Specialized Tools</h3>
+            <div class="flex flex-wrap">
+              <span class="skill-tag">AI/ML Integration</span>
+              <span class="skill-tag">RAG Systems</span>
+              <span class="skill-tag">PDF Generation</span>
+              <span class="skill-tag">Semantic Search</span>
+            </div>
           </div>
         </div>
-        <ul class="text-gray-200 space-y-2">
-          <li>• Built internal tools, educational platforms, and automation scripts</li>
-          <li>• Collaborated on full-stack projects using modern technologies</li>
-          <li>• Developed microservices architecture for scalable systems</li>
-        </ul>
-      </div>
-      
-      <div class="project-card">
-        <div class="flex items-center mb-3">
-          <span class="text-3xl mr-3">🎓</span>
-          <div>
-            <h3 class="text-xl font-bold text-white">PUCRS – Pontifícia Universidade Católica do Rio Grande do Sul</h3>
-            <p class="text-gray-300">Bachelor's in Computer Science</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact -->
-    <footer class="mt-8 pt-6 border-t border-white border-opacity-20">
-      <div class="text-center">
-        <h3 class="text-2xl font-bold text-white mb-4">🚀 Let's Connect!</h3>
-        <div class="flex justify-center space-x-4 flex-wrap">
-          <a href="mailto:wellitonscheer@gmail.com" class="contact-link">
-            <span class="mr-2">📧</span>wellitonscheer@gmail.com
-          </a>
-          <a href="https://github.com/wellitonscheer" class="contact-link">
-            <span class="mr-2">🔗</span>GitHub
-          </a>
-          <a href="https://linkedin.com/in/welliton-scheer" class="contact-link">
-            <span class="mr-2">💼</span>LinkedIn
-          </a>
+      <!-- Projects -->
+      <section class="mb-8">
+        <h2 class="text-3xl font-bold mb-6 section-title"><i class="fas fa-laptop-code mr-3"></i>Key Projects</h2>
+
+        <div class="project-card">
+          <div class="flex items-center mb-3">
+            <i class="fas fa-calendar-alt text-3xl mr-3 text-blue-400"></i>
+            <h3 class="text-2xl font-bold text-white">Setrem Eventos</h3>
+          </div>
+          <p class="text-gray-200 mb-4 text-lg">Comprehensive event management system with real-time processing,
+            automated backups, and webhook handling for seamless integration.</p>
+          <div class="mb-3">
+            <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag text-sm">Next.js</span>
+              <span class="skill-tag text-sm">TypeScript</span>
+              <span class="skill-tag text-sm">PostgreSQL</span>
+              <span class="skill-tag text-sm">Docker</span>
+              <span class="skill-tag text-sm">RabbitMQ</span>
+              <span class="skill-tag text-sm">Prisma</span>
+              <span class="skill-tag text-sm">Turborepo</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-300">
+            <p><strong>Architecture:</strong> Microservices for dashboard, queues, webhooks, and backups</p>
+            <p><strong>Role:</strong> Full-stack developer</p>
+          </div>
         </div>
-        <p class="text-gray-300 text-sm mt-4">Open to new opportunities and exciting projects!</p>
-      </div>
-    </footer>
+
+        <div class="project-card">
+          <div class="flex items-center mb-3">
+            <i class="fas fa-graduation-cap text-3xl mr-3 text-green-400"></i>
+            <h3 class="text-2xl font-bold text-white">Setrem Matrículas</h3>
+          </div>
+          <p class="text-gray-200 mb-4 text-lg">Advanced student registration system for academic institutions with
+            streamlined enrollment processes.</p>
+          <div class="text-sm text-gray-300">
+            <p><strong>Architecture:</strong> Similar stack and architecture to Setrem Eventos</p>
+            <p><strong>Role:</strong> Lead developer</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-center mb-3">
+            <i class="fas fa-credit-card text-3xl mr-3 text-yellow-400"></i>
+            <h3 class="text-2xl font-bold text-white">Proxy Pagamentos</h3>
+          </div>
+          <p class="text-gray-200 mb-4 text-lg">Secure payment gateway proxy system handling financial transactions with
+            enterprise-grade security.</p>
+          <div class="mb-3">
+            <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag text-sm">TypeScript</span>
+              <span class="skill-tag text-sm">PostgreSQL</span>
+              <span class="skill-tag text-sm">RabbitMQ</span>
+              <span class="skill-tag text-sm">Docker</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-300">
+            <p><strong>Role:</strong> Backend developer</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-center mb-3">
+            <i class="fas fa-ticket-alt text-3xl mr-3 text-purple-400"></i>
+            <h3 class="text-2xl font-bold text-white">Ticket Helper</h3>
+          </div>
+          <p class="text-gray-200 mb-4 text-lg">AI-powered support ticket manager with semantic search capabilities and
+            Chrome browser integration.</p>
+          <div class="mb-3">
+            <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag text-sm">Go</span>
+              <span class="skill-tag text-sm">PostgreSQL</span>
+              <span class="skill-tag text-sm">PgVector</span>
+              <span class="skill-tag text-sm">Docker</span>
+              <span class="skill-tag text-sm">HTMX</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-300">
+            <p><strong>Role:</strong> Full-stack Go developer</p>
+            <p><strong>Features:</strong> Natural language search, RAG, semantic similarity, email notifications, secure
+              access</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-center mb-3">
+            <i class="fas fa-share-alt text-3xl mr-3 text-blue-400"></i>
+            <h3 class="text-2xl font-bold text-white">Rede Social CTI 2023</h3>
+          </div>
+          <p class="text-gray-200 mb-4 text-lg">Modern social networking application built with cutting-edge web
+            technologies and monorepo architecture.</p>
+          <div class="mb-3">
+            <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag text-sm">Next.js</span>
+              <span class="skill-tag text-sm">TypeScript</span>
+              <span class="skill-tag text-sm">Turborepo</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-300">
+            <p><strong>Role:</strong> Frontend/full-stack developer</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-center mb-3">
+            <i class="fas fa-cogs text-3xl mr-3 text-red-400"></i>
+            <h3 class="text-2xl font-bold text-white">Rust Assembly Experiments</h3>
+          </div>
+          <p class="text-gray-200 mb-4 text-lg">Experimental projects combining Rust and assembly to explore low-level
+            programming concepts and system optimization.</p>
+          <div class="text-sm text-gray-300">
+            <p><strong>Focus:</strong> Learning systems programming, performance optimization, and low-level concepts
+            </p>
+            <p><strong>Role:</strong> Experimental developer exploring systems programming</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contributions -->
+      <section class="mb-8">
+        <h2 class="text-3xl font-bold mb-6 section-title"><i class="fas fa-star mr-3"></i>Key Contributions</h2>
+        <div class="project-card">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+              <i class="fas fa-cubes text-2xl mr-3 text-blue-400"></i>
+              <div>
+                <h4 class="text-white font-semibold">Microservices Architecture</h4>
+                <p class="text-gray-300 text-sm">Scalable, modular backend systems</p>
+              </div>
+            </div>
+            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+              <i class="fas fa-layer-group text-2xl mr-3 text-green-400"></i>
+              <div>
+                <h4 class="text-white font-semibold">Full-Stack Development</h4>
+                <p class="text-gray-300 text-sm">End-to-end application delivery</p>
+              </div>
+            </div>
+            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+              <i class="fas fa-cogs text-2xl mr-3 text-yellow-400"></i>
+              <div>
+                <h4 class="text-white font-semibold">DevOps Integration</h4>
+                <p class="text-gray-300 text-sm">CI/CD with Docker and automation</p>
+              </div>
+            </div>
+            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+              <i class="fas fa-robot text-2xl mr-3 text-purple-400"></i>
+              <div>
+                <h4 class="text-white font-semibold">AI Integration</h4>
+                <p class="text-gray-300 text-sm">Semantic search, RAG, similarity detection</p>
+              </div>
+            </div>
+            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+              <i class="fas fa-graduation-cap text-2xl mr-3 text-indigo-400"></i>
+              <div>
+                <h4 class="text-white font-semibold">Educational Tools</h4>
+                <p class="text-gray-300 text-sm">Student and event management platforms</p>
+              </div>
+            </div>
+            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+              <i class="fas fa-credit-card text-2xl mr-3 text-red-400"></i>
+              <div>
+                <h4 class="text-white font-semibold">Payment Systems</h4>
+                <p class="text-gray-300 text-sm">Secure financial data flow and routing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience & Education -->
+      <section class="mb-8">
+        <h2 class="text-3xl font-bold mb-6 section-title">💼 Experience & Education</h2>
+
+        <div class="project-card mb-4">
+          <div class="flex items-center mb-3">
+            <span class="text-3xl mr-3">🏢</span>
+            <div>
+              <h3 class="text-xl font-bold text-white">Setrem – Sociedade Educacional Três de Maio</h3>
+              <p class="text-gray-300">Software Developer</p>
+            </div>
+          </div>
+          <ul class="text-gray-200 space-y-2">
+            <li>• Built internal tools, educational platforms, and automation scripts</li>
+            <li>• Collaborated on full-stack projects using modern technologies</li>
+            <li>• Developed microservices architecture for scalable systems</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-center mb-3">
+            <i class="fas fa-graduation-cap text-3xl mr-3 text-blue-400"></i>
+            <div>
+              <h3 class="text-xl font-bold text-white">PUCRS – Pontifícia Universidade Católica do Rio Grande do Sul</h3>
+              <p class="text-gray-300">Higher Technology Course (CST), Database: Data Analytics Emphasis</p>
+              <p class="text-sm text-gray-400">February 2025 - July 2027</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-center mb-3">
+            <i class="fas fa-school text-3xl mr-3 text-green-400"></i>
+            <div>
+              <h3 class="text-xl font-bold text-white">Setrem – Sociedade Educacional Três de Maio</h3>
+              <p class="text-gray-300">Technical Education, Computer Science</p>
+              <p class="text-sm text-gray-400">February 2021 - May 2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <footer class="mt-8 pt-6 border-t border-white border-opacity-20">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold text-white mb-4">🚀 Let's Connect!</h3>
+          <div class="flex justify-center space-x-4 flex-wrap">
+            <a href="mailto:wellitonscheer@gmail.com" class="contact-link">
+              <i class="fas fa-envelope mr-2"></i>wellitonscheer@gmail.com
+            </a>
+            <a href="https://github.com/wellitonscheer" class="contact-link">
+              <i class="fab fa-github mr-2"></i>GitHub
+            </a>
+            <a href="https://linkedin.com/in/welliton-scheer" class="contact-link">
+              <i class="fab fa-linkedin mr-2"></i>LinkedIn
+            </a>
+          </div>
+          <p class="text-gray-300 text-sm mt-4">Open to new opportunities and exciting projects!</p>
+        </div>
+      </footer>
     </div>
   </div>
 
@@ -556,14 +603,14 @@
       const geometry = geometries[Math.floor(Math.random() * geometries.length)];
       const material = materials[Math.floor(Math.random() * materials.length)];
       const shape = new THREE.Mesh(geometry, material);
-      
+
       shape.position.x = (Math.random() - 0.5) * 20;
       shape.position.y = (Math.random() - 0.5) * 20;
       shape.position.z = (Math.random() - 0.5) * 20;
-      
+
       shape.rotation.x = Math.random() * Math.PI;
       shape.rotation.y = Math.random() * Math.PI;
-      
+
       shape.userData = {
         rotationSpeed: {
           x: (Math.random() - 0.5) * 0.02,
@@ -573,7 +620,7 @@
         floatSpeed: (Math.random() - 0.5) * 0.01,
         floatRange: Math.random() * 2 + 1
       };
-      
+
       shapes.push(shape);
       scene.add(shape);
     }
@@ -583,20 +630,20 @@
     // Animation loop
     function animate() {
       requestAnimationFrame(animate);
-      
+
       shapes.forEach((shape, index) => {
         // Rotate shapes
         shape.rotation.x += shape.userData.rotationSpeed.x;
         shape.rotation.y += shape.userData.rotationSpeed.y;
         shape.rotation.z += shape.userData.rotationSpeed.z;
-        
+
         // Float shapes up and down
         shape.position.y += Math.sin(Date.now() * 0.001 + index) * shape.userData.floatSpeed;
       });
-      
+
       // Slowly rotate the entire scene
       scene.rotation.y += 0.001;
-      
+
       renderer.render(scene, camera);
     }
 
@@ -611,4 +658,5 @@
     animate();
   </script>
 </body>
+
 </html>
