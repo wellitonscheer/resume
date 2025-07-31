@@ -139,7 +139,3 @@ Feel free to fork this project and customize it for your own use. If you make im
 - Email: wellitonscheer@gmail.com
 - GitHub: [@wellitonscheer](https://github.com/wellitonscheer)
 - LinkedIn: [Welliton Scheer](https://linkedin.com/in/wellitonscheer)
-
----
-
-*Built with ❤️ using modern web technologies*
