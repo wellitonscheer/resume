@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welliton Scheer – Resume</title>
+  <link rel="icon" href="icon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -258,7 +259,7 @@
       <header class="header-gradient">
         <h1 class="text-5xl name-title mb-4">Welliton Scheer</h1>
         <p class="text-xl text-white mb-4 typing-effect">Full-Stack Software Developer</p>
-        <p class="text-white mb-6"><i class="fas fa-map-marker-alt mr-2"></i>Três de Maio, RS, Brazil</p>
+        <p class="text-white mb-6"><i class="fas fa-map-marker-alt mr-2"></i>RS, Brazil</p>
         <div class="flex justify-center space-x-4">
           <a href="https://github.com/wellitonscheer" class="contact-link floating-icon">
             <i class="fab fa-github mr-2"></i>GitHub
@@ -280,7 +281,8 @@
             <strong>PUCRS</strong> and professional experience at <strong>Setrem</strong>. I specialize in full-stack
             web development, developer experience optimization, and AI integration using modern technologies like Go,
             TypeScript, and Python. Passionate about solving real-world problems through clean architecture, automation,
-            and innovative solutions.</p>
+            and innovative solutions.
+          </p>
         </div>
       </section>
 
@@ -343,6 +345,45 @@
 
         <div class="project-card">
           <div class="flex items-center mb-3">
+            <i class="fas fa-ticket-alt text-3xl mr-3 text-purple-400"></i>
+            <h3 class="text-2xl font-bold text-white">Ticket Helper</h3>
+          </div>
+          <p class="text-gray-200 mb-4 text-lg">Smart AI-powered ticket management system that revolutionizes support
+            workflows by enabling intelligent search and organization. Uses AI embeddings to understand ticket content
+            and helps teams find similar issues instantly through natural language queries.</p>
+
+          <div class="mb-4">
+            <h4 class="text-white font-semibold mb-2">🚀 Key Features & Impact:</h4>
+            <ul class="text-gray-200 space-y-1 text-sm">
+              <li>• <strong>Intelligent Search:</strong> Find related tickets using natural language descriptions</li>
+              <li>• <strong>Semantic Matching:</strong> AI-powered similarity detection across ticket vector database
+              </li>
+              <li>• <strong>Performance:</strong> Eliminates manual searching, reduces response time significantly</li>
+            </ul>
+          </div>
+
+          <div class="mb-3">
+            <h4 class="text-white font-semibold mb-2">Tech Stack & Architecture:</h4>
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span class="skill-tag text-sm">Go</span>
+              <span class="skill-tag text-sm">Gin Framework</span>
+              <span class="skill-tag text-sm">PostgreSQL</span>
+              <span class="skill-tag text-sm">PgVector</span>
+              <span class="skill-tag text-sm">Docker</span>
+              <span class="skill-tag text-sm">Vector Embeddings</span>
+              <span class="skill-tag text-sm">SMTP</span>
+            </div>
+            <p class="text-gray-300 text-sm">Modular design with clean separation of concerns, RESTful API, and
+              microservices architecture</p>
+          </div>
+
+          <div class="text-sm text-gray-300">
+            <p><strong>Role:</strong> Full-stack Go developer & AI integration specialist</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-center mb-3">
             <i class="fas fa-calendar-alt text-3xl mr-3 text-blue-400"></i>
             <h3 class="text-2xl font-bold text-white">Setrem Eventos</h3>
           </div>
@@ -397,30 +438,6 @@
           </div>
           <div class="text-sm text-gray-300">
             <p><strong>Role:</strong> Backend developer</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="flex items-center mb-3">
-            <i class="fas fa-ticket-alt text-3xl mr-3 text-purple-400"></i>
-            <h3 class="text-2xl font-bold text-white">Ticket Helper</h3>
-          </div>
-          <p class="text-gray-200 mb-4 text-lg">AI-powered support ticket manager with semantic search capabilities and
-            Chrome browser integration.</p>
-          <div class="mb-3">
-            <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-tag text-sm">Go</span>
-              <span class="skill-tag text-sm">PostgreSQL</span>
-              <span class="skill-tag text-sm">PgVector</span>
-              <span class="skill-tag text-sm">Docker</span>
-              <span class="skill-tag text-sm">HTMX</span>
-            </div>
-          </div>
-          <div class="text-sm text-gray-300">
-            <p><strong>Role:</strong> Full-stack Go developer</p>
-            <p><strong>Features:</strong> Natural language search, RAG, semantic similarity, email notifications, secure
-              access</p>
           </div>
         </div>
 
@@ -533,7 +550,8 @@
           <div class="flex items-center mb-3">
             <i class="fas fa-graduation-cap text-3xl mr-3 text-blue-400"></i>
             <div>
-              <h3 class="text-xl font-bold text-white">PUCRS – Pontifícia Universidade Católica do Rio Grande do Sul</h3>
+              <h3 class="text-xl font-bold text-white">PUCRS – Pontifícia Universidade Católica do Rio Grande do Sul
+              </h3>
               <p class="text-gray-300">Higher Technology Course (CST), Database: Data Analytics Emphasis</p>
               <p class="text-sm text-gray-400">February 2025 - July 2027</p>
             </div>
