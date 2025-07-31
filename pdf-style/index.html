@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welliton Scheer – Resume</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary-color: #1e40af;
+      --primary-dark: #1e3a8a;
+      --secondary-color: #374151;
+      --accent-color: #111827;
+      --text-primary: #111827;
+      --text-secondary: #374151;
+      --text-muted: #6b7280;
+      --border-color: #d1d5db;
+      --bg-light: #f9fafb;
+      --bg-white: #ffffff;
+      --bg-section: #ffffff;
+      --skill-bg: #e5e7eb;
+      --skill-text: #374151;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      color: var(--text-primary);
+      background: var(--bg-white);
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 8.5in;
+      margin: 0 auto;
+      background: var(--bg-white);
+      min-height: 11in;
+      padding: 0;
+    }
+
+    /* Header Section */
+    .header {
+      background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+      color: white;
+      padding: 2rem;
+      margin-bottom: 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .header-left h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.025em;
+    }
+
+    .header-left .title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-left .location {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .contact-info {
+      text-align: right;
+      font-size: 0.9rem;
+    }
+
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.25rem;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    .contact-info a:hover {
+      opacity: 1;
+    }
+
+    /* Main Content Layout */
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    /* Left Column and Right Column spacing handled by section margins */
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title i {
+      font-size: 1rem;
+    }
+
+    /* Skills Section */
+    .skills-category {
+      margin-bottom: 1.5rem;
+    }
+
+    .skills-category h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-tag {
+      background: #374151;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 2px solid #374151;
+      display: inline-block;
+      margin: 0.25rem 0.25rem 0.25rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      white-space: nowrap;
+    }
+
+    /* Experience and Education */
+    .experience-item,
+    .education-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .experience-item:last-child,
+    .education-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      margin-bottom: 0.5rem;
+    }
+
+    .item-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .item-company {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .item-period {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .item-description {
+      margin-top: 0.5rem;
+    }
+
+    .item-description ul {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .item-description li {
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* Projects */
+    .project-item {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      margin-bottom: 1.25rem;
+      padding: 1rem;
+      background: var(--bg-section);
+      border-radius: 0.5rem;
+      border-left: 4px solid var(--primary-color);
+      border: 1px solid var(--border-color);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .project-description {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .tech-tag {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    /* About Section */
+    .about-text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    /* Utilities */
+    .text-center {
+      text-align: center;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+    }
+
+    .text-xs {
+      font-size: 0.75rem;
+    }
+
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .contact-info {
+        text-align: center;
+      }
+
+      .main-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      .header-left h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 4px;
+    }
+
+    .contact-link i {
+      margin-right: 8px;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title i {
+      margin-right: 12px;
+    }
+
+    .card {
+      background: var(--bg-section);
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .skills-section h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .skills-section {
+      margin-bottom: 16px;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: linear-gradient(45deg, var(--accent-navy), var(--accent-dark-navy));
+      color: var(--text-primary);
+      padding: 8px 16px;
+      border-radius: 25px;
+      margin: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .project-header i {
+      font-size: 24px;
+      margin-right: 12px;
+    }
+
+    .project-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .project-description {
+      color: #d1d5db;
+      margin-bottom: 8px;
+    }
+
+    .project-tech {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    .experience-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .experience-header i {
+      font-size: 24px;
+      margin-right: 12px;
+    }
+
+    .experience-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .experience-company {
+      color: #d1d5db;
+    }
+
+    .experience-period {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+    }
+
+    .footer h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .footer p {
+      color: #d1d5db;
+      font-size: 14px;
+      margin-top: 16px;
+    }
+
+    /* Icon colors */
+    .text-blue-400 {
+      color: #60a5fa;
+    }
+
+    .text-green-400 {
+      color: #4ade80;
+    }
+
+    /* Print-friendly styles */
+    @media print {
+      @page {
+        size: A4;
+        margin: 0.5in;
+      }
+
+      :root {
+        --primary-dark: #ffffff;
+        --primary-medium: #f8fafc;
+        --primary-light: #f1f5f9;
+        --accent-navy: #1e40af;
+        --accent-dark-navy: #1e3a8a;
+        --accent-blue: #3b82f6;
+        --text-primary: #1f2937;
+        --text-secondary: #374151;
+        --text-muted: #6b7280;
+        --glass-bg: #ffffff;
+        --glass-border: #e5e7eb;
+      }
+
+      body {
+        background: #ffffff !important;
+        color: #1f2937 !important;
+        padding: 16px !important;
+        margin: 0 !important;
+        min-height: auto !important;
+      }
+
+      .container {
+        width: 100% !important;
+        max-width: none !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0.5in !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        background: #ffffff !important;
+        backdrop-filter: none !important;
+        border: none !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+        padding: 24px !important;
+        margin: 0 auto !important;
+        max-width: 768px !important;
+      }
+
+      .header {
+        page-break-after: avoid !important;
+        break-inside: avoid !important;
+        background: #f8fafc !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 8px !important;
+      }
+
+      .name {
+        color: #1f2937 !important;
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        -webkit-text-fill-color: initial !important;
+        background-clip: initial !important;
+      }
+
+      .title {
+        color: #1f2937 !important;
+      }
+
+      .location {
+        color: #374151 !important;
+      }
+
+      .contact-link {
+        background: #f3f4f6 !important;
+        backdrop-filter: none !important;
+        color: #1f2937 !important;
+        border: 1px solid #d1d5db !important;
+      }
+
+      .section-title {
+        page-break-after: avoid !important;
+        break-inside: avoid !important;
+        color: #1f2937 !important;
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        -webkit-text-fill-color: initial !important;
+        background-clip: initial !important;
+      }
+
+      .card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        background: #f9fafb !important;
+        backdrop-filter: none !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 8px !important;
+      }
+
+      .card p {
+        color: #1f2937 !important;
+      }
+
+      .skills-section h3 {
+        page-break-after: avoid !important;
+        color: #1f2937 !important;
+      }
+
+      .skill-tag {
+        background: linear-gradient(45deg, #dbeafe, #bfdbfe) !important;
+        color: #1e40af !important;
+        border: 1px solid #93c5fd !important;
+      }
+
+      .project-title {
+        color: #1f2937 !important;
+      }
+
+      .project-description {
+        color: #374151 !important;
+      }
+
+      .project-tech {
+        color: #6b7280 !important;
+      }
+
+      .experience-title {
+        color: #1f2937 !important;
+      }
+
+      .experience-company {
+        color: #374151 !important;
+      }
+
+      .experience-period {
+        color: #6b7280 !important;
+      }
+
+      .footer {
+        border-top: 1px solid #e5e7eb !important;
+      }
+
+      .footer h3 {
+        color: #1f2937 !important;
+      }
+
+      .footer p {
+        color: #374151 !important;
+      }
+
+      /* Icon colors for print */
+      .text-blue-400 {
+        color: #3b82f6 !important;
+      }
+
+      .text-green-400 {
+        color: #059669 !important;
+      }
+
+      /* Ensure icons are visible */
+      i {
+        color: #374151 !important;
+      }
+
+      /* Remove any shadows or effects that don't print well */
+      /* Hide interactive elements in print */
+      .download-btn,
+      .print-btn,
+      .no-print {
+        display: none !important;
+      }
+
+      * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+    }
+
+    .text-purple-400 {
+      color: #a78bfa;
+    }
+
+    .text-red-400 {
+      color: #f87171;
+    }
+
+    .text-yellow-400 {
+      color: #facc15;
+    }
+
+    .text-pink-400 {
+      color: #f472b6;
+    }
+
+    .text-indigo-400 {
+      color: #818cf8;
+    }
+
+    .text-orange-400 {
+      color: #fb923c;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <h1>Welliton Scheer</h1>
+          <p class="title">Full-Stack Software Developer</p>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> RS, Brazil</p>
+        </div>
+        <div class="contact-info">
+          <a href="mailto:wellitonscheer@gmail.com">
+            <i class="fas fa-envelope"></i> wellitonscheer@gmail.com
+          </a>
+          <a href="https://github.com/wellitonscheer">
+            <i class="fab fa-github"></i> github.com/wellitonscheer
+          </a>
+          <a href="https://linkedin.com/in/welliton-scheer">
+            <i class="fab fa-linkedin"></i> linkedin.com/in/welliton-scheer
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Left Column -->
+      <div class="left-column">
+
+
+        <!-- Skills -->
+        <section class="section">
+          <h2 class="section-title"><i class="fas fa-code"></i>Technical Skills</h2>
+
+          <div class="skills-category">
+            <h4>Languages</h4>
+            <div class="skills-list">
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Go</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Rust</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Frameworks</h4>
+            <div class="skills-list">
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Turborepo</span>
+              <span class="skill-tag">HTMX</span>
+              <span class="skill-tag">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Databases</h4>
+            <div class="skills-list">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Prisma ORM</span>
+              <span class="skill-tag">PgVector</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Infrastructure</h4>
+            <div class="skills-list">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">RabbitMQ</span>
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">CI/CD</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Specialized</h4>
+            <div class="skills-list">
+              <span class="skill-tag">AI/ML Integration</span>
+              <span class="skill-tag">RAG Systems</span>
+              <span class="skill-tag">Vector Embeddings</span>
+              <span class="skill-tag">Semantic Search</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+          <h2 class="section-title"><i class="fas fa-graduation-cap"></i>Education</h2>
+
+          <div class="education-item">
+            <div class="item-header">
+              <h3 class="item-title">Database Technology</h3>
+              <p class="item-company">PUCRS – Pontifícia Universidade Católica do Rio Grande do Sul</p>
+              <p class="item-period">Feb 2025 - Jul 2027</p>
+            </div>
+            <p class="text-sm">Higher Technology Course (CST), Data Analytics Emphasis</p>
+          </div>
+
+          <div class="education-item">
+            <div class="item-header">
+              <h3 class="item-title">Computer Science</h3>
+              <p class="item-company">Setrem – Sociedade Educacional Três de Maio</p>
+              <p class="item-period">Feb 2021 - May 2025</p>
+            </div>
+            <p class="text-sm">Technical Education</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- About -->
+        <section class="section">
+          <h2 class="section-title"><i class="fas fa-user"></i>About Me</h2>
+          <p class="about-text">
+            I'm a developer who has worked with <strong>Go</strong> and <strong>TypeScript</strong>, mainly on backend
+            projects.
+            I've had the chance to learn about microservices, work with RabbitMQ queues, PostgreSQL, Docker, and explore
+            AI integration through projects involving vector search and RAG systems. I've contributed to some customer
+            service
+            automation tools and academic systems, always trying to understand how things work under the hood. Currently
+            studying
+            Database Technology with a focus on Data Analytics to build a stronger foundation. I'm always eager to learn
+            new
+            things, collaborate with others, and improve my skills.
+          </p>
+        </section>
+
+        <!-- Areas of Learning & Experience -->
+        <section class="section">
+          <h2 class="section-title"><i class="fas fa-star"></i>Areas I've Worked With</h2>
+          <div class="card">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fas fa-cubes text-blue-400"></i>
+                <div>
+                  <h4 class="font-semibold">Service-Based Architecture</h4>
+                  <p class="text-sm">Working with distributed application components</p>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fas fa-layer-group text-green-400"></i>
+                <div>
+                  <h4 class="font-semibold">Full-Stack Development</h4>
+                  <p class="text-sm">End-to-end application delivery</p>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fas fa-cogs text-yellow-400"></i>
+                <div>
+                  <h4 class="font-semibold">Development Tools</h4>
+                  <p class="text-sm">Working with Docker and automation tools</p>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fas fa-robot text-purple-400"></i>
+                <div>
+                  <h4 class="font-semibold">AI Integration</h4>
+                  <p class="text-sm">Semantic search, RAG, similarity detection</p>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fas fa-graduation-cap text-indigo-400"></i>
+                <div>
+                  <h4 class="font-semibold">Educational Projects</h4>
+                  <p class="text-sm">Student and event systems for institutions</p>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fas fa-credit-card text-red-400"></i>
+                <div>
+                  <h4 class="font-semibold">Payment Processing</h4>
+                  <p class="text-sm">Basic payment data handling and integration</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section">
+          <h2 class="section-title"><i class="fas fa-briefcase"></i>Experience</h2>
+
+          <div class="experience-item">
+            <div class="item-header" style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="text-3xl">🏢</span>
+              <div>
+                <h3 class="item-title">Setrem – Sociedade Educacional Três de Maio</h3>
+                <p class="item-company">Full Stack Developer</p>
+                <p class="item-period">October 2023 - Present · 1 year 10 months</p>
+              </div>
+            </div>
+            <ul>
+              <li>Helped create internal tools and educational platforms</li>
+              <li>Participated in team-based web development projects</li>
+              <li>Learned about service-based application architecture</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="item-header" style="display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-laptop-code text-purple-400"></i>
+              <div>
+                <h3 class="item-title">A1 Lab</h3>
+                <p class="item-company">Software Developer (Freelance)</p>
+                <p class="item-period">November 2022 - October 2023 · 1 year</p>
+                <p class="item-period">Remote</p>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">AWS Lambda</span>
+              <span class="tech-tag">AWS CloudFormation</span>
+              <span class="tech-tag">Amazon DynamoDB</span>
+            </div>
+            <ul>
+              <li>Developed API services using Python with AWS Lambda and CloudFormation</li>
+              <li>Contributed to data processing and storage solutions</li>
+              <li>Implemented a caching system using DynamoDB that checked for cached data validity before making
+                third-party API requests</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="item-header" style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="text-3xl">🏢</span>
+              <div>
+                <h3 class="item-title">Setrem – Sociedade Educacional Três de Maio</h3>
+                <p class="item-company">Software Developer (Apprentice)</p>
+                <p class="item-period">February 2021 - November 2022 · 1 year 10 months</p>
+              </div>
+            </div>
+            <ul>
+              <li>Assisted with web development tasks and basic programming assignments</li>
+              <li>Learned fundamentals of software development and collaborative coding</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Key Projects -->
+        <section class="section">
+          <h2 class="section-title"><i class="fas fa-laptop-code"></i>Key Projects</h2>
+
+          <!-- Ticket Helper -->
+          <div class="project-item">
+            <div class="project-header">
+              <i class="fas fa-ticket-alt text-purple-400"></i>
+              <h3 class="project-title">Ticket Helper</h3>
+            </div>
+            <p class="project-description">
+              A ticket management tool I built to help with organizing and searching support tickets. It uses AI
+              embeddings to find similar tickets when you describe an issue in natural language.
+            </p>
+            <ul>
+              <li><strong>Search feature:</strong> Find related tickets by describing the problem</li>
+              <li><strong>Similarity matching:</strong> Uses vector embeddings to compare ticket content</li>
+              <li><strong>RAG system:</strong> Retrieval-Augmented Generation for intelligent responses</li>
+              <li><strong>Performance:</strong> Eliminates manual searching, reduces response time significantly</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">Go</span>
+              <span class="tech-tag">Gin Framework</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">PgVector</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Vector Embeddings</span>
+              <span class="tech-tag">SMTP</span>
+            </div>
+            <div class="text-xs">
+              <strong>Role:</strong> Full-stack Go developer & AI integration
+            </div>
+          </div>
+
+          <!-- Setrem Eventos -->
+          <div class="project-item">
+            <div class="project-header">
+              <i class="fas fa-calendar-alt text-blue-400"></i>
+              <h3 class="project-title">Setrem Eventos</h3>
+            </div>
+            <p class="project-description">
+              Event management system I helped build that handles event registrations, processes payments, and provides
+              administrative dashboards for educational institutions.
+            </p>
+            <ul>
+              <li><strong>Architecture:</strong> Microservices for dashboard, queues, webhooks, and backups</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">RabbitMQ</span>
+              <span class="tech-tag">Turborepo</span>
+              <span class="tech-tag">Prisma</span>
+            </div>
+            <div class="text-xs">
+              <strong>Role:</strong> Full-stack developer
+            </div>
+          </div>
+
+          <!-- Setrem Matrículas -->
+          <div class="project-item">
+            <div class="project-header">
+              <i class="fas fa-graduation-cap text-green-400"></i>
+              <h3 class="project-title">Setrem Matrículas</h3>
+            </div>
+            <p class="project-description">
+              Student registration system I worked on that helps educational institutions manage enrollment and course
+              selection.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+            <div class="text-xs">
+              <strong>Role:</strong> Lead developer
+            </div>
+          </div>
+
+          <!-- Rede Social CTI 2023 -->
+          <div class="project-item">
+            <div class="project-header">
+              <i class="fas fa-share-alt text-blue-400"></i>
+              <h3 class="project-title">Rede Social CTI 2023</h3>
+            </div>
+            <p class="project-description">
+              Social networking project I participated in as part of my technical education, focusing on learning web
+              application development.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Turborepo</span>
+            </div>
+            <div class="text-xs">
+              <strong>Role:</strong> Worked on frontend components and helped with backend integration
+            </div>
+          </div>
+
+          <!-- Rust Assembly Experiments -->
+          <div class="project-item">
+            <div class="project-header">
+              <i class="fas fa-cogs text-red-400"></i>
+              <h3 class="project-title">Rust Assembly Experiments</h3>
+            </div>
+            <p class="project-description">
+              Experimental projects combining Rust and assembly to explore low-level programming concepts and system
+              optimization.
+            </p>
+            <div class="text-xs">
+              <strong>Focus:</strong> Learning systems programming, performance optimization, and low-level concepts<br>
+              <strong>Role:</strong> Experimental developer exploring systems programming
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
