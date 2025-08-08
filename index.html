@@ -35,21 +35,11 @@
       font-family: 'Inter', sans-serif;
     }
 
-    body {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 50%, var(--primary-light) 100%);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+    /* Body background handled by Tailwind utilities on <body> */
+    /* body styles via Tailwind */
 
-    #three-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.8;
-    }
+    /* Canvas positioning handled by Tailwind utilities on <canvas> */
+    /* canvas styles via Tailwind */
 
     .content {
       position: relative;
@@ -57,91 +47,15 @@
       animation: fadeInUp 1s ease-out;
     }
 
-    .glass-effect {
-      backdrop-filter: blur(20px);
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-    }
+    /* removed .glass-effect; using Tailwind utilities */
 
-    .project-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
+    /* removed .project-card styles; using Tailwind utilities */
 
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      transition: left 0.5s;
-    }
+    /* removed .skill-tag styles; using Tailwind utilities */
 
-    .project-card:hover::before {
-      left: 100%;
-    }
+    /* removed .section-title underline animation; using Tailwind underline utilities */
 
-    .project-card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .skill-tag {
-      display: inline-block;
-      background: linear-gradient(45deg, var(--accent-navy), var(--accent-dark-navy));
-      color: var(--text-primary);
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      margin: 0.25rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .skill-tag:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(30, 64, 175, 0.4);
-      background: linear-gradient(45deg, var(--accent-blue), var(--accent-navy));
-    }
-
-    .section-title {
-      color: var(--text-primary);
-      position: relative;
-      display: inline-block;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 3px;
-      background: linear-gradient(45deg, var(--accent-navy), var(--accent-dark-navy));
-      transition: width 0.3s ease;
-    }
-
-    .section-title:hover::after {
-      width: 100%;
-    }
-
-    .floating-icon {
-      animation: float 3s ease-in-out infinite;
-      display: inline-block;
-    }
+    /* removed .floating-icon; using hover translate utilities */
 
     .typing-effect {
       overflow: hidden;
@@ -150,21 +64,7 @@
       animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
     }
 
-    .progress-bar {
-      width: 100%;
-      height: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-top: 0.5rem;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(45deg, var(--accent-navy), var(--accent-dark-navy));
-      border-radius: 4px;
-      transition: width 2s ease-in-out;
-    }
+    /* removed progress styles */
 
     @keyframes fadeInUp {
       from {
@@ -178,17 +78,7 @@
       }
     }
 
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
-    }
+    /* removed float animation */
 
     @keyframes typing {
       from {
@@ -212,74 +102,65 @@
       }
     }
 
-    .contact-link {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      border-radius: 25px;
-      color: var(--text-primary);
-      text-decoration: none;
-      margin: 0.25rem;
-      transition: all 0.3s ease;
-    }
+    /* removed .contact-link; using Tailwind utilities */
 
-    .contact-link:hover {
-      background: var(--glass-border);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);
-      border-color: var(--accent-navy);
-    }
+    /* removed .header-gradient; using Tailwind utilities */
 
-    .header-gradient {
-      background: linear-gradient(135deg, var(--glass-bg), rgba(255, 255, 255, 0.05));
-      border-radius: 15px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      border: 1px solid var(--glass-border);
-    }
+    /* removed .name-title; using Tailwind utilities */
 
-    .name-title {
-      background: linear-gradient(45deg, var(--text-primary), var(--text-secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-weight: 800;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Responsive tweaks handled via Tailwind breakpoints */
+
+    /* Avoid overflow for typing effect on very small screens */
+    @media (max-width: 380px) {
+      .typing-effect {
+        white-space: normal;
+        border-right: 0;
+        animation: none;
+      }
     }
   </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800 p-6">
-  <canvas id="three-canvas"></canvas>
+<body
+  class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-slate-100 min-h-screen overflow-x-hidden p-4 sm:p-6">
+  <canvas id="three-canvas" class="fixed inset-0 w-full h-full -z-10 opacity-80"></canvas>
   <div class="content">
-    <div class="max-w-3xl mx-auto glass-effect p-8 rounded-lg shadow-2xl">
+    <div class="max-w-3xl mx-auto p-4 sm:p-8 rounded-2xl shadow-2xl backdrop-blur bg-white/10 border border-white/20">
       <!-- Header -->
-      <header class="header-gradient">
-        <h1 class="text-5xl name-title mb-4">Welliton Scheer</h1>
-        <p class="text-xl text-white mb-4 typing-effect">Full-Stack Software Developer</p>
+      <header
+        class="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-4 sm:p-8 text-center border border-white/20 backdrop-blur">
+        <h1
+          class="text-3xl sm:text-5xl mb-4 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent font-extrabold drop-shadow">
+          Welliton Scheer</h1>
+        <p class="text-lg sm:text-xl text-white mb-4 typing-effect">Full-Stack Software Developer</p>
         <p class="text-white mb-6"><i class="fas fa-map-marker-alt mr-2"></i>RS, Brazil</p>
-        <div class="flex justify-center space-x-4">
-          <a target="_blank" href="https://github.com/wellitonscheer" class="contact-link floating-icon text-xl">
-            <i class="fab fa-github"></i>
+        <div class="flex justify-center gap-3 flex-wrap">
+          <a target="_blank" href="https://github.com/wellitonscheer"
+            class="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white no-underline transition hover:bg-white/20 hover:-translate-y-0.5 hover:shadow-lg">
+            <i class="fab fa-github text-xl"></i>
           </a>
-          <a target="_blank" href="https://linkedin.com/in/welliton-scheer" class="contact-link floating-icon text-xl">
-            <i class="fab fa-linkedin"></i>
+          <a target="_blank" href="https://linkedin.com/in/welliton-scheer"
+            class="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white no-underline transition hover:bg-white/20 hover:-translate-y-0.5 hover:shadow-lg">
+            <i class="fab fa-linkedin text-xl"></i>
           </a>
-          <a target="_blank" href="https://instagram.com/welliton_scheer" class="contact-link floating-icon text-xl">
-            <i class="fab fa-instagram "></i>
+          <a target="_blank" href="https://instagram.com/welliton_scheer"
+            class="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white no-underline transition hover:bg-white/20 hover:-translate-y-0.5 hover:shadow-lg">
+            <i class="fab fa-instagram text-xl"></i>
           </a>
-          <a target="_blank" href="mailto:wellitonscheer@gmail.com" class="contact-link floating-icon text-xl">
-            <i class="fas fa-envelope mr-2"></i>wellitonscheer@gmail.com
+          <a target="_blank" href="mailto:wellitonscheer@gmail.com"
+            class="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white no-underline transition hover:bg-white/20 hover:-translate-y-0.5 hover:shadow-lg">
+            <i class="fas fa-envelope mr-2"></i><span class="hidden sm:inline">wellitonscheer@gmail.com</span>
           </a>
         </div>
       </header>
 
       <!-- About -->
       <section class="mb-8">
-        <h2 class="text-3xl font-bold mb-4 section-title"><i class="fas fa-user mr-3"></i>About Me</h2>
-        <div class="project-card">
+        <h2
+          class="text-3xl font-bold mb-4 text-white inline-block hover:underline underline-offset-4 decoration-2 decoration-blue-700 mt-8">
+          <i class="fas fa-user mr-3"></i>About Me</h2>
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-6 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <p class="text-white text-lg leading-relaxed">I'm a developer who has worked with <strong>Go</strong> and
             <strong>TypeScript</strong>, mainly on backend projects. I've had the chance to learn about microservices,
             work with RabbitMQ queues, PostgreSQL, Docker, and explore AI integration through projects involving vector
@@ -293,53 +174,77 @@
 
       <!-- Technical Skills -->
       <section class="mb-8">
-        <h2 class="text-3xl font-bold mb-4 section-title"><i class="fas fa-code mr-3"></i>Technologies I've Worked With
+        <h2
+          class="text-3xl font-bold mb-4 text-white inline-block hover:underline underline-offset-4 decoration-2 decoration-blue-700">
+          <i class="fas fa-code mr-3"></i>Technologies I've Worked With
         </h2>
-        <div class="project-card">
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-6 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-white mb-2">Languages</h3>
             <div class="flex flex-wrap">
-              <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">Go</span>
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">Rust</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">TypeScript</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Go</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Python</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">JavaScript</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Rust</span>
             </div>
           </div>
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-white mb-2">Frameworks & Libraries</h3>
             <div class="flex flex-wrap">
-              <span class="skill-tag">Next.js</span>
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Turborepo</span>
-              <span class="skill-tag">HTMX</span>
-              <span class="skill-tag">Tailwind CSS</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Next.js</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">React</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Turborepo</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">HTMX</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Tailwind
+                CSS</span>
             </div>
           </div>
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-white mb-2">Databases & Storage</h3>
             <div class="flex flex-wrap">
-              <span class="skill-tag">PostgreSQL</span>
-              <span class="skill-tag">Prisma ORM</span>
-              <span class="skill-tag">PgVector</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">PostgreSQL</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Prisma
+                ORM</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">PgVector</span>
             </div>
           </div>
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-white mb-2">Infrastructure & DevOps</h3>
             <div class="flex flex-wrap">
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">RabbitMQ</span>
-              <span class="skill-tag">Microservices</span>
-              <span class="skill-tag">CI/CD</span>
+              <span
+                class="inline-block bg-gradient-to-r from-blue-800 to-blue-900 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Docker</span>
             </div>
           </div>
           <div>
             <h3 class="text-lg font-semibold text-white mb-2">Specialized Tools</h3>
             <div class="flex flex-wrap">
-              <span class="skill-tag">AI/ML Integration</span>
-              <span class="skill-tag">RAG Systems</span>
-              <span class="skill-tag">PDF Generation</span>
-              <span class="skill-tag">Semantic Search</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">AI/ML
+                Integration</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">RAG
+                Systems</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">PDF
+                Generation</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Semantic
+                Search</span>
             </div>
           </div>
         </div>
@@ -347,9 +252,12 @@
 
       <!-- Projects -->
       <section class="mb-8">
-        <h2 class="text-3xl font-bold mb-6 section-title"><i class="fas fa-laptop-code mr-3"></i>Key Projects</h2>
+        <h2
+          class="text-3xl font-bold mb-6 text-white inline-block hover:underline underline-offset-4 decoration-2 decoration-blue-700">
+          <i class="fas fa-laptop-code mr-3"></i>Key Projects</h2>
 
-        <div class="project-card">
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="flex items-center mb-3">
             <i class="fas fa-ticket-alt text-3xl mr-3 text-purple-400"></i>
             <h3 class="text-2xl font-bold text-white">Ticket Helper</h3>
@@ -371,13 +279,22 @@
           <div class="mb-3">
             <h4 class="text-white font-semibold mb-2">Technologies used:</h4>
             <div class="flex flex-wrap gap-2 mb-2">
-              <span class="skill-tag text-sm">Go</span>
-              <span class="skill-tag text-sm">Gin Framework</span>
-              <span class="skill-tag text-sm">PostgreSQL</span>
-              <span class="skill-tag text-sm">PgVector</span>
-              <span class="skill-tag text-sm">Docker</span>
-              <span class="skill-tag text-sm">Vector Embeddings</span>
-              <span class="skill-tag text-sm">SMTP</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Go</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Gin
+                Framework</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">PostgreSQL</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">PgVector</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Docker</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Vector
+                Embeddings</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">SMTP</span>
             </div>
           </div>
 
@@ -386,7 +303,8 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="flex items-center mb-3">
             <i class="fas fa-calendar-alt text-3xl mr-3 text-blue-400"></i>
             <h3 class="text-2xl font-bold text-white">Setrem Eventos</h3>
@@ -396,13 +314,20 @@
           <div class="mb-3">
             <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
             <div class="flex flex-wrap gap-2">
-              <span class="skill-tag text-sm">Next.js</span>
-              <span class="skill-tag text-sm">TypeScript</span>
-              <span class="skill-tag text-sm">PostgreSQL</span>
-              <span class="skill-tag text-sm">Docker</span>
-              <span class="skill-tag text-sm">RabbitMQ</span>
-              <span class="skill-tag text-sm">Prisma</span>
-              <span class="skill-tag text-sm">Turborepo</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Next.js</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">TypeScript</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">PostgreSQL</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Docker</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">RabbitMQ</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Prisma</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Turborepo</span>
             </div>
           </div>
           <div class="text-sm text-gray-300">
@@ -411,7 +336,8 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="flex items-center mb-3">
             <i class="fas fa-graduation-cap text-3xl mr-3 text-green-400"></i>
             <h3 class="text-2xl font-bold text-white">Setrem Matrículas</h3>
@@ -424,7 +350,8 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="flex items-center mb-3">
             <i class="fas fa-share-alt text-3xl mr-3 text-blue-400"></i>
             <h3 class="text-2xl font-bold text-white">Rede Social CTI 2023</h3>
@@ -434,9 +361,12 @@
           <div class="mb-3">
             <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
             <div class="flex flex-wrap gap-2">
-              <span class="skill-tag text-sm">Next.js</span>
-              <span class="skill-tag text-sm">TypeScript</span>
-              <span class="skill-tag text-sm">Turborepo</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Next.js</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">TypeScript</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Turborepo</span>
             </div>
           </div>
           <div class="text-sm text-gray-300">
@@ -444,7 +374,8 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="flex items-center mb-3">
             <i class="fas fa-cogs text-3xl mr-3 text-red-400"></i>
             <h3 class="text-2xl font-bold text-white">Rust Assembly Experiments</h3>
@@ -461,45 +392,48 @@
 
       <!-- Areas of Learning & Experience -->
       <section class="mb-8">
-        <h2 class="text-3xl font-bold mb-6 section-title"><i class="fas fa-star mr-3"></i>Areas I've Worked With</h2>
-        <div class="project-card">
+        <h2
+          class="text-3xl font-bold mb-6 text-white inline-block hover:underline underline-offset-4 decoration-2 decoration-blue-700">
+          <i class="fas fa-star mr-3"></i>Areas I've Worked With</h2>
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-6 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+            <div class="flex items-center p-3 bg-white/5 rounded-lg">
               <i class="fas fa-cubes text-2xl mr-3 text-blue-400"></i>
               <div>
                 <h4 class="text-white font-semibold">Service-Based Architecture</h4>
                 <p class="text-gray-300 text-sm">Working with distributed application components</p>
               </div>
             </div>
-            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+            <div class="flex items-center p-3 bg-white/5 rounded-lg">
               <i class="fas fa-layer-group text-2xl mr-3 text-green-400"></i>
               <div>
                 <h4 class="text-white font-semibold">Full-Stack Development</h4>
                 <p class="text-gray-300 text-sm">End-to-end application delivery</p>
               </div>
             </div>
-            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+            <div class="flex items-center p-3 bg-white/5 rounded-lg">
               <i class="fas fa-cogs text-2xl mr-3 text-yellow-400"></i>
               <div>
                 <h4 class="text-white font-semibold">Development Tools</h4>
                 <p class="text-gray-300 text-sm">Working with Docker and automation tools</p>
               </div>
             </div>
-            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+            <div class="flex items-center p-3 bg-white/5 rounded-lg">
               <i class="fas fa-robot text-2xl mr-3 text-purple-400"></i>
               <div>
                 <h4 class="text-white font-semibold">AI Integration</h4>
                 <p class="text-gray-300 text-sm">Semantic search, RAG, similarity detection</p>
               </div>
             </div>
-            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+            <div class="flex items-center p-3 bg-white/5 rounded-lg">
               <i class="fas fa-graduation-cap text-2xl mr-3 text-indigo-400"></i>
               <div>
                 <h4 class="text-white font-semibold">Educational Projects</h4>
                 <p class="text-gray-300 text-sm">Student and event systems for institutions</p>
               </div>
             </div>
-            <div class="flex items-center p-3 bg-rgba(255,255,255,0.05) rounded-lg">
+            <div class="flex items-center p-3 bg-white/5 rounded-lg">
               <i class="fas fa-credit-card text-2xl mr-3 text-red-400"></i>
               <div>
                 <h4 class="text-white font-semibold">Payment Processing</h4>
@@ -512,9 +446,12 @@
 
       <!-- Experience & Education -->
       <section class="mb-8">
-        <h2 class="text-3xl font-bold mb-6 section-title">💼 Experience</h2>
+        <h2
+          class="text-3xl font-bold mb-6 text-white inline-block hover:underline underline-offset-4 decoration-2 decoration-blue-700">
+          💼 Experience</h2>
 
-        <div class="project-card mb-4">
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="flex items-center mb-3">
             <span class="text-3xl mr-3">🏢</span>
             <div>
@@ -530,7 +467,8 @@
           </ul>
         </div>
 
-        <div class="project-card mb-4">
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="flex items-center mb-3">
             <i class="fas fa-laptop-code text-3xl mr-3 text-purple-400"></i>
             <div>
@@ -543,10 +481,17 @@
           <div class="mb-3">
             <h4 class="text-white font-semibold mb-2">Tech Stack:</h4>
             <div class="flex flex-wrap gap-2">
-              <span class="skill-tag text-sm">Python</span>
-              <span class="skill-tag text-sm">AWS Lambda</span>
-              <span class="skill-tag text-sm">AWS CloudFormation</span>
-              <span class="skill-tag text-sm">Amazon DynamoDB</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Python</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">AWS
+                Lambda</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">AWS
+                CloudFormation</span>
+              <span
+                class="bg-blue-800 text-white px-3 py-1.5 rounded-full m-1 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-[0_5px_15px_rgba(30,64,175,0.4)]">Amazon
+                DynamoDB</span>
             </div>
           </div>
           <ul class="text-gray-200 space-y-2">
@@ -557,7 +502,8 @@
           </ul>
         </div>
 
-        <div class="project-card mb-4">
+        <div
+          class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
           <div class="flex items-center mb-3">
             <span class="text-3xl mr-3">🏢</span>
             <div>
@@ -574,9 +520,12 @@
 
         <!-- Education -->
         <section class="mb-8">
-          <h2 class="text-3xl font-bold mb-6 section-title"><i class="fas fa-graduation-cap mr-3"></i>Education</h2>
+          <h2
+            class="text-3xl font-bold mb-6 text-white inline-block hover:underline underline-offset-4 decoration-2 decoration-blue-700">
+            <i class="fas fa-graduation-cap mr-3"></i>Education</h2>
 
-          <div class="project-card">
+          <div
+            class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
             <div class="flex items-center mb-3">
               <i class="fas fa-university text-3xl mr-3 text-blue-400"></i>
               <div>
@@ -588,7 +537,8 @@
             </div>
           </div>
 
-          <div class="project-card">
+          <div
+            class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 mb-4 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:border-white/30">
             <div class="flex items-center mb-3">
               <i class="fas fa-school text-3xl mr-3 text-green-400"></i>
               <div>
@@ -604,17 +554,21 @@
         <footer class="mt-8 pt-6 border-t border-white border-opacity-20">
           <div class="text-center">
             <h3 class="text-2xl font-bold text-white mb-4">🚀 Let's Connect!</h3>
-            <div class="flex justify-center space-x-4 flex-wrap">
-              <a target="_blank" href="https://github.com/wellitonscheer" class="contact-link floating-icon text-xl">
-                <i class="fab fa-github"></i>
+            <div class="flex justify-center gap-3 flex-wrap">
+              <a target="_blank" href="https://github.com/wellitonscheer"
+                class="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white no-underline transition hover:bg-white/20 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fab fa-github text-xl"></i>
               </a>
-              <a target="_blank" href="https://linkedin.com/in/welliton-scheer" class="contact-link floating-icon text-xl">
-                <i class="fab fa-linkedin"></i>
+              <a target="_blank" href="https://linkedin.com/in/welliton-scheer"
+                class="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white no-underline transition hover:bg-white/20 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fab fa-linkedin text-xl"></i>
               </a>
-              <a target="_blank" href="https://instagram.com/welliton_scheer" class="contact-link floating-icon text-xl">
-                <i class="fab fa-instagram"></i>
+              <a target="_blank" href="https://instagram.com/welliton_scheer"
+                class="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white no-underline transition hover:bg-white/20 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fab fa-instagram text-xl"></i>
               </a>
-              <a target="_blank" href="mailto:wellitonscheer@gmail.com" class="contact-link floating-icon text-xl">
+              <a target="_blank" href="mailto:wellitonscheer@gmail.com"
+                class="inline-block px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white no-underline transition hover:bg-white/20 hover:-translate-y-0.5 hover:shadow-lg">
                 <i class="fas fa-envelope mr-2"></i>wellitonscheer@gmail.com
               </a>
             </div>
