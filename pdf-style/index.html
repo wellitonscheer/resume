@@ -1,245 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welliton Scheer – Resume (PDF Style)</title>
-    <link rel="icon" href="../icon.png" type="image/png" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --ink: #0b0f19;
-        --muted: #475569;
-        --line: #e5e7eb;
-        --accent: #1e3a8a;
-      }
 
-      html, body {
-        margin: 0;
-        padding: 0;
-        color: var(--ink);
-        font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welliton Scheer – Resume (PDF Style)</title>
+  <link rel="icon" href="../icon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0b0f19;
+      --muted: #475569;
+      --line: #e5e7eb;
+      --accent: #1e3a8a;
+    }
 
-      @page { size: A4; margin: 14mm 12mm; }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: var(--ink);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
 
-      .page { width: 210mm; box-sizing: border-box; }
-      .layout { display: grid; grid-template-columns: 64mm 1fr; gap: 12mm; align-items: start; }
-      .sidebar { border-right: 1px solid var(--line); padding-right: 6mm; }
+    @page {
+      size: A4;
+      margin: 14mm 12mm;
+    }
 
-      /* Header */
-      header { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 8px; }
-      .name { font-size: 22px; font-weight: 700; letter-spacing: 0.2px; }
-      .title { color: var(--muted); font-weight: 600; font-size: 12.5px; margin-top: 2px; }
-      .contact { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; align-items: center; font-size: 11.5px; }
-      .contact a, .contact span { color: var(--ink); text-decoration: none; }
-      .contact a { border-bottom: 1px dotted transparent; }
-      .contact a:hover { border-color: var(--accent); }
+    .page {
+      width: 210mm;
+      box-sizing: border-box;
+    }
 
-      /* Sections */
-      section { margin-top: 12px; }
-      .sec-title { font-size: 12px; font-weight: 800; letter-spacing: 0.8px; color: var(--accent); text-transform: uppercase; margin: 0 0 6px; }
-      .muted { color: var(--muted); }
+    .layout {
+      display: grid;
+      grid-template-columns: 64mm 1fr;
+      gap: 12mm;
+      align-items: start;
+    }
 
-      /* Lists */
-      ul { padding-left: 16px; margin: 6px 0 0; }
-      li { margin: 3px 0; line-height: 1.35; }
+    .sidebar {
+      border-right: 1px solid var(--line);
+      padding-right: 6mm;
+    }
 
-      /* Pill skills */
-      .pill-row { display: flex; flex-wrap: wrap; gap: 6px; }
-      .pill { font-size: 11px; border: 1px solid var(--line); padding: 3px 7px; border-radius: 999px; white-space: nowrap; }
+    /* Header */
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: end;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+    }
 
-      /* Entry blocks */
-      .entry { padding: 10px 0; border-top: 1px solid var(--line); }
-      .entry:first-of-type { border-top: 0; }
-      .entry h3 { margin: 0; font-size: 13px; }
-      .entry .meta { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
-      p { margin: 4px 0; line-height: 1.38; font-size: 12px; }
+    .name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
 
-      /* Page break helper */
-      .page-break { break-after: page; }
-    </style>
-  </head>
-  <body>
-    <main class="page">
-      <header>
-        <div>
-          <div class="name">Welliton Scheer</div>
-          <div class="title">Full-Stack Software Developer</div>
-        </div>
-        <div class="contact">
-          <span>RS, Brazil</span>
-          <a href="mailto:wellitonscheer@gmail.com">wellitonscheer@gmail.com</a>
-          <a href="https://github.com/wellitonscheer" target="_blank" rel="noreferrer">github.com/wellitonscheer</a>
-          <a href="https://linkedin.com/in/welliton-scheer" target="_blank" rel="noreferrer">linkedin.com/in/welliton-scheer</a>
-        </div>
-      </header>
+    .title {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 12.5px;
+      margin-top: 2px;
+    }
 
-      <div class="layout">
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-          <section>
-            <h2 class="sec-title">Contact</h2>
-            <p class="muted">RS, Brazil</p>
-            <p><a href="mailto:wellitonscheer@gmail.com">wellitonscheer@gmail.com</a></p>
-            <p><a href="https://github.com/wellitonscheer" target="_blank" rel="noreferrer">github.com/wellitonscheer</a></p>
-            <p><a href="https://linkedin.com/in/welliton-scheer" target="_blank" rel="noreferrer">linkedin.com/in/welliton-scheer</a></p>
-          </section>
+    .contact {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 11.5px;
+    }
 
-          <section>
-            <h2 class="sec-title">Core Skills</h2>
-            <div class="pill-row">
-              <span class="pill">TypeScript</span>
-              <span class="pill">Go</span>
-              <span class="pill">Python</span>
-              <span class="pill">JavaScript</span>
-              <span class="pill">Rust</span>
-            </div>
-          </section>
+    .contact a,
+    .contact span {
+      color: var(--ink);
+      text-decoration: none;
+    }
 
-          <section>
-            <h2 class="sec-title">Tooling</h2>
-            <div class="pill-row">
-              <span class="pill">Next.js</span>
-              <span class="pill">React</span>
-              <span class="pill">Turborepo</span>
-              <span class="pill">HTMX</span>
-              <span class="pill">Tailwind CSS</span>
-              <span class="pill">PostgreSQL</span>
-              <span class="pill">Prisma ORM</span>
-              <span class="pill">PgVector</span>
-              <span class="pill">Docker</span>
-              <span class="pill">AI/ML Integration</span>
-              <span class="pill">RAG Systems</span>
-              <span class="pill">PDF Generation</span>
-              <span class="pill">Semantic Search</span>
-            </div>
-          </section>
-        </aside>
+    .contact a {
+      border-bottom: 1px dotted transparent;
+    }
 
-        <!-- MAIN COLUMN -->
-        <div class="main">
-          <section>
-            <h2 class="sec-title">Summary</h2>
-            <p>I'm a developer who has worked with <strong>Go</strong> and <strong>TypeScript</strong>, mainly on backend projects. I've had the chance to learn about microservices, work with RabbitMQ queues, PostgreSQL, Docker, and explore AI integration through projects involving vector search and RAG systems. I've contributed to some customer service automation tools and academic systems, always trying to understand how things work under the hood. Currently studying Database Technology with a focus on Data Analytics to build a stronger foundation. I'm always eager to learn new things, collaborate with others, and improve my skills.</p>
-          </section>
+    .contact a:hover {
+      border-color: var(--accent);
+    }
 
-          <section>
-            <h2 class="sec-title">Experience</h2>
-            <div class="entry">
-              <h3>Setrem – Sociedade Educacional Três de Maio</h3>
-              <div class="meta">Full Stack Developer</div>
-              <div class="meta">October 2023 - Present · 1 year 10 months</div>
-              <ul>
-                <li>• Helped create internal tools and educational platforms</li>
-                <li>• Participated in team-based web development projects</li>
-                <li>• Learned about service-based application architecture</li>
-              </ul>
-            </div>
+    /* Sections */
+    section {
+      margin-top: 12px;
+    }
 
-            <div class="entry">
-              <h3>A1 Lab</h3>
-              <div class="meta">Software Developer (Freelance)</div>
-              <div class="meta">November 2022 - October 2023 · 1 year</div>
-              <div class="meta">Remote</div>
-              <div class="meta"><strong>Tech Stack:</strong> Python, AWS Lambda, AWS CloudFormation, Amazon DynamoDB</div>
-              <ul>
-                <li>• Developed API services using Python with AWS Lambda and CloudFormation</li>
-                <li>• Contributed to data processing and storage solutions</li>
-                <li>• Implemented a caching system using DynamoDB that checked for cached data validity before making third-party API requests</li>
-              </ul>
-            </div>
+    .sec-title {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin: 0 0 6px;
+    }
 
-            <div class="entry">
-              <h3>Setrem – Sociedade Educacional Três de Maio</h3>
-              <div class="meta">Software Developer (Apprentice)</div>
-              <div class="meta">February 2021 - November 2022 · 1 year 10 months</div>
-              <ul>
-                <li>• Assisted with web development tasks and basic programming assignments</li>
-                <li>• Learned fundamentals of software development and collaborative coding</li>
-              </ul>
-            </div>
-          </section>
+    .muted {
+      color: var(--muted);
+    }
 
-          <section>
-            <h2 class="sec-title">Key Projects</h2>
-            <div class="entry">
-              <h3>Ticket Helper</h3>
-              <p>A ticket management tool I built to help with organizing and searching support tickets. It uses AI embeddings to find similar tickets when you describe an issue in natural language.</p>
-              <h4>What I built:</h4>
-              <ul>
-                <li>• <strong>Search feature:</strong> Find related tickets by describing the problem</li>
-                <li>• <strong>Similarity matching:</strong> Uses vector embeddings to compare ticket content</li>
-                <li>• <strong>RAG system:</strong> Retrieval-Augmented Generation for intelligent responses</li>
-                <li>• <strong>Performance:</strong> Eliminates manual searching, reduces response time significantly</li>
-              </ul>
-              <h4>Technologies used:</h4>
-              <div class="meta">Go, Gin Framework, PostgreSQL, PgVector, Docker, Vector Embeddings, SMTP</div>
-              <div class="meta"><strong>Role:</strong> Full-stack Go developer & AI integration</div>
-            </div>
+    /* Lists */
+    ul {
+      padding-left: 16px;
+      margin: 6px 0 0;
+    }
 
-            <div class="entry">
-              <h3>Setrem Eventos</h3>
-              <p>Event management system I helped build that handles event registrations, processes payments, and provides administrative dashboards for educational institutions.</p>
-              <h4>Tech Stack:</h4>
-              <div class="meta">Next.js, TypeScript, PostgreSQL, Docker, RabbitMQ, Prisma, Turborepo</div>
-              <div class="meta"><strong>Architecture:</strong> Microservices for dashboard, queues, webhooks, and backups</div>
-              <div class="meta"><strong>Role:</strong> Full-stack developer</div>
-            </div>
+    li {
+      margin: 3px 0;
+      line-height: 1.35;
+    }
 
-            <div class="entry">
-              <h3>Setrem Matrículas</h3>
-              <p>Student registration system I worked on that helps educational institutions manage enrollment and course selection.</p>
-              <div class="meta"><strong>Stack:</strong> Similar technologies to Setrem Eventos (Next.js, TypeScript, PostgreSQL)</div>
-              <div class="meta"><strong>Role:</strong> Lead developer</div>
-            </div>
+    /* Pill skills */
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
 
-            <div class="entry">
-              <h3>Rede Social CTI 2023</h3>
-              <p>Social networking project I participated in as part of my technical education, focusing on learning web application development.</p>
-              <h4>Tech Stack:</h4>
-              <div class="meta">Next.js, TypeScript, Turborepo</div>
-              <div class="meta"><strong>Role:</strong> Worked on frontend components and helped with backend integration</div>
-            </div>
+    .pill {
+      font-size: 11px;
+      border: 1px solid var(--line);
+      padding: 3px 7px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
 
-            <div class="entry">
-              <h3>Rust Assembly Experiments</h3>
-              <p>Experimental projects combining Rust and assembly to explore low-level programming concepts and system optimization.</p>
-              <div class="meta"><strong>Focus:</strong> Learning systems programming, performance optimization, and low-level concepts</div>
-              <div class="meta"><strong>Role:</strong> Experimental developer exploring systems programming</div>
-            </div>
-          </section>
+    /* Entry blocks */
+    .entry {
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+    }
 
-          <section>
-            <h2 class="sec-title">Areas I've Worked With</h2>
-            <ul>
-              <li><strong>Service-Based Architecture</strong> — Working with distributed application components</li>
-              <li><strong>Full-Stack Development</strong> — End-to-end application delivery</li>
-              <li><strong>Development Tools</strong> — Working with Docker and automation tools</li>
-              <li><strong>AI Integration</strong> — Semantic search, RAG, similarity detection</li>
-              <li><strong>Educational Projects</strong> — Student and event systems for institutions</li>
-              <li><strong>Payment Processing</strong> — Basic payment data handling and integration</li>
-            </ul>
-          </section>
+    .entry:first-of-type {
+      border-top: 0;
+    }
 
-          <section>
-            <h2 class="sec-title">Education</h2>
-            <div class="entry">
-              <h3>PUCRS – Pontifícia Universidade Católica do Rio Grande do Sul</h3>
-              <div class="meta">Higher Technology Course (CST), Database: Data Analytics Emphasis</div>
-              <div class="meta">February 2025 - July 2027</div>
-            </div>
-            <div class="entry">
-              <h3>Setrem – Sociedade Educacional Três de Maio</h3>
-              <div class="meta">Technical Education, Computer Science</div>
-              <div class="meta">February 2021 - May 2025</div>
-            </div>
-          </section>
-        </div>
+    .entry h3 {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .entry .meta {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    p {
+      margin: 4px 0;
+      line-height: 1.38;
+      font-size: 12px;
+    }
+
+    /* Page break helper */
+    .page-break {
+      break-after: page;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <div class="name">Welliton Scheer</div>
+        <div class="title">Full-Stack Software Developer</div>
       </div>
-    </main>
-  </body>
-  </html>
+      <div class="contact">
+        <span>RS, Brazil</span>
+        <a href="mailto:wellitonscheer@gmail.com">wellitonscheer@gmail.com</a>
+        <a href="https://github.com/wellitonscheer" target="_blank" rel="noreferrer">github.com/wellitonscheer</a>
+        <a href="https://linkedin.com/in/welliton-scheer" target="_blank"
+          rel="noreferrer">linkedin.com/in/welliton-scheer</a>
+      </div>
+    </header>
 
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <section>
+          <h2 class="sec-title">Contact</h2>
+          <p class="muted">RS, Brazil</p>
+          <p><a href="mailto:wellitonscheer@gmail.com">wellitonscheer@gmail.com</a></p>
+          <p><a href="https://github.com/wellitonscheer" target="_blank" rel="noreferrer">github.com/wellitonscheer</a>
+          </p>
+          <p><a href="https://linkedin.com/in/welliton-scheer" target="_blank"
+              rel="noreferrer">linkedin.com/in/welliton-scheer</a></p>
+        </section>
+
+        <section>
+          <h2 class="sec-title">Core Skills</h2>
+          <div class="pill-row">
+            <span class="pill">TypeScript</span>
+            <span class="pill">Go</span>
+            <span class="pill">Python</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Rust</span>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="sec-title">Tooling</h2>
+          <div class="pill-row">
+            <span class="pill">Next.js</span>
+            <span class="pill">React</span>
+            <span class="pill">Turborepo</span>
+            <span class="pill">HTMX</span>
+            <span class="pill">Tailwind CSS</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Prisma ORM</span>
+            <span class="pill">PgVector</span>
+            <span class="pill">Docker</span>
+            <span class="pill">AI/ML Integration</span>
+            <span class="pill">RAG Systems</span>
+            <span class="pill">PDF Generation</span>
+            <span class="pill">Semantic Search</span>
+          </div>
+        </section>
+      </aside>
+
+      <!-- MAIN COLUMN -->
+      <div class="main">
+        <section>
+          <h2 class="sec-title">Summary</h2>
+          <p>I'm a developer who has worked with <strong>Go</strong> and <strong>TypeScript</strong>, mainly on backend
+            projects. I've had the chance to learn about microservices, work with RabbitMQ queues, PostgreSQL, Docker,
+            and explore AI integration through projects involving vector search and RAG systems. I've contributed to
+            some customer service automation tools and academic systems, always trying to understand how things work
+            under the hood. Currently studying Database Technology with a focus on Data Analytics to build a stronger
+            foundation. I'm always eager to learn new things, collaborate with others, and improve my skills.</p>
+        </section>
+
+        <section>
+          <h2 class="sec-title">Experience</h2>
+          <div class="entry">
+            <h3>Setrem - Sociedade Educacional Três de Maio</h3>
+            <div class="meta">Full Stack Developer</div>
+            <div class="meta">October 2023 - Present · 1 year 10 months</div>
+            <ul>
+              <li>Helped create internal tools and educational platforms</li>
+              <li>Participated in team-based web development projects</li>
+              <li>Learned about service-based application architecture</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <h3>A1 Lab</h3>
+            <div class="meta">Software Developer (Freelance)</div>
+            <div class="meta">November 2022 - October 2023 · 1 year</div>
+            <div class="meta">Remote</div>
+            <div class="meta"><strong>Tech Stack:</strong> Python, AWS Lambda, AWS CloudFormation, Amazon DynamoDB</div>
+            <ul>
+              <li>Developed API services using Python with AWS Lambda and CloudFormation</li>
+              <li>Contributed to data processing and storage solutions</li>
+              <li>Implemented a caching system using DynamoDB that checked for cached data validity before making
+                third-party API requests</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <h3>Setrem - Sociedade Educacional Três de Maio</h3>
+            <div class="meta">Software Developer (Apprentice)</div>
+            <div class="meta">February 2021 - November 2022 · 1 year 10 months</div>
+            <ul>
+              <li>Assisted with web development tasks and basic programming assignments</li>
+              <li>Learned fundamentals of software development and collaborative coding</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="sec-title">Key Projects</h2>
+          <div class="entry">
+            <h3>Ticket Helper</h3>
+            <p>A ticket management tool I built to help with organizing and searching support tickets. It uses AI
+              embeddings to find similar tickets when you describe an issue in natural language.</p>
+            <h4>What I built:</h4>
+            <ul>
+              <li><strong>Search feature:</strong> Find related tickets by describing the problem</li>
+              <li><strong>Similarity matching:</strong> Uses vector embeddings to compare ticket content</li>
+              <li><strong>RAG system:</strong> Retrieval-Augmented Generation for intelligent responses</li>
+              <li><strong>Performance:</strong> Eliminates manual searching, reduces response time significantly</li>
+            </ul>
+            <h4>Technologies used:</h4>
+            <div class="meta">Go, Gin Framework, PostgreSQL, PgVector, Docker, Vector Embeddings, SMTP</div>
+            <div class="meta"><strong>Role:</strong> Full-stack Go developer & AI integration</div>
+          </div>
+
+          <div class="entry">
+            <h3>Setrem Eventos</h3>
+            <p>Event management system I helped build that handles event registrations, processes payments, and provides
+              administrative dashboards for educational institutions.</p>
+            <h4>Tech Stack:</h4>
+            <div class="meta">Next.js, TypeScript, PostgreSQL, Docker, RabbitMQ, Prisma, Turborepo</div>
+            <div class="meta"><strong>Architecture:</strong> Microservices for dashboard, queues, webhooks, and backups
+            </div>
+            <div class="meta"><strong>Role:</strong> Full-stack developer</div>
+          </div>
+
+          <div class="entry">
+            <h3>Setrem Matrículas</h3>
+            <p>Student registration system I worked on that helps educational institutions manage enrollment and course
+              selection.</p>
+            <div class="meta"><strong>Stack:</strong> Similar technologies to Setrem Eventos (Next.js, TypeScript,
+              PostgreSQL)</div>
+            <div class="meta"><strong>Role:</strong> Lead developer</div>
+          </div>
+
+          <div class="entry">
+            <h3>Rede Social CTI 2023</h3>
+            <p>Social networking project I participated in as part of my technical education, focusing on learning web
+              application development.</p>
+            <h4>Tech Stack:</h4>
+            <div class="meta">Next.js, TypeScript, Turborepo</div>
+            <div class="meta"><strong>Role:</strong> Worked on frontend components and helped with backend integration
+            </div>
+          </div>
+
+          <div class="entry">
+            <h3>Rust Assembly Experiments</h3>
+            <p>Experimental projects combining Rust and assembly to explore low-level programming concepts and system
+              optimization.</p>
+            <div class="meta"><strong>Focus:</strong> Learning systems programming, performance optimization, and
+              low-level concepts</div>
+            <div class="meta"><strong>Role:</strong> Experimental developer exploring systems programming</div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="sec-title">Areas I've Worked With</h2>
+          <ul>
+            <li><strong>Service-Based Architecture</strong> — Working with distributed application components</li>
+            <li><strong>Full-Stack Development</strong> — End-to-end application delivery</li>
+            <li><strong>Development Tools</strong> — Working with Docker and automation tools</li>
+            <li><strong>AI Integration</strong> — Semantic search, RAG, similarity detection</li>
+            <li><strong>Educational Projects</strong> — Student and event systems for institutions</li>
+            <li><strong>Payment Processing</strong> — Basic payment data handling and integration</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="sec-title">Education</h2>
+          <div class="entry">
+            <h3>PUCRS - Pontifícia Universidade Católica do Rio Grande do Sul</h3>
+            <div class="meta">Higher Technology Course (CST), Database: Data Analytics Emphasis</div>
+            <div class="meta">February 2025 - July 2027</div>
+          </div>
+          <div class="entry">
+            <h3>Setrem - Sociedade Educacional Três de Maio</h3>
+            <div class="meta">Technical Education, Computer Science</div>
+            <div class="meta">February 2021 - May 2025</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
