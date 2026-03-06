@@ -9,6 +9,7 @@
   const slides = [HeaderAbout, Experience, OpenSource, Projects, Education]
 </script>
 
-<main class="bg-gray-950 text-gray-300 min-h-screen overflow-hidden">
+<main class="text-gray-300 min-h-screen overflow-hidden bg-cover bg-center bg-no-repeat"
+      style="background-image: url('/taking_photo.JPG');">
   <Carousel {slides} />
 </main>

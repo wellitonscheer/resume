@@ -11,8 +11,8 @@
   const total = $derived(slides.length)
   const transform = $derived(
     isMobile
-      ? `translateY(-${currentIndex * 100}%)`
-      : `translateX(-${currentIndex * 100}%)`
+      ? `translateY(-${currentIndex * 185}%)`
+      : `translateX(-${currentIndex * 185}%)`
   )
 
   function next() {
@@ -86,17 +86,17 @@
       <div
         role="region"
         aria-label="Resume carousel"
-        class="w-full bg-gray-900 rounded-xl border border-gray-800 overflow-hidden"
+        class="w-full overflow-hidden"
         style="height: 85vh;"
         ontouchstart={handleTouchStart}
         ontouchend={handleTouchEnd}
       >
         <div
-          class="flex flex-col w-full h-full transition-transform duration-400 ease-in-out"
+          class="flex flex-col w-full h-full transition-transform duration-400 ease-in-out gap-y-[85%]"
           style="transform: {transform}"
         >
           {#each slides as Slide, i}
-            <div class="w-full shrink-0 h-full overflow-y-auto slide-content px-8 py-6">
+            <div class="w-full shrink-0 h-full overflow-y-auto slide-content px-8 py-6 bg-gray-900 rounded-xl border border-gray-800">
               <Slide />
             </div>
           {/each}
@@ -137,17 +137,17 @@
         <div
           role="region"
           aria-label="Resume carousel"
-          class="w-full bg-gray-900 rounded-xl border border-gray-800 overflow-hidden"
+          class="w-full overflow-hidden"
           style="height: 85vh;"
           ontouchstart={handleTouchStart}
           ontouchend={handleTouchEnd}
         >
           <div
-            class="flex flex-row w-full h-full transition-transform duration-400 ease-in-out"
+            class="flex flex-row w-full h-full transition-transform duration-400 ease-in-out gap-x-[85%]"
             style="transform: {transform}"
           >
             {#each slides as Slide, i}
-              <div class="w-full shrink-0 h-full overflow-y-auto slide-content px-8 py-6">
+              <div class="w-full shrink-0 h-full overflow-y-auto slide-content px-8 py-6 bg-gray-900 rounded-xl border border-gray-800">
                 <Slide />
               </div>
             {/each}
