@@ -7,7 +7,7 @@
       <h3 class="text-white font-medium">spf13/pflag — Fix getFlagType error message</h3>
       <a href="https://github.com/spf13/pflag/pull/462" target="_blank"
         class="inline-flex items-center gap-1.5 shrink-0 bg-[#4a3f37]/60 text-gray-300 px-2.5 py-1 rounded-full text-xs hover:bg-[#5a4d43]/80 hover:text-white transition">
-        <i class="fas fa-external-link-alt text-[10px]"></i> PR #462
+        <i class="fas fa-external-link-alt text-[0.625rem]"></i> PR #462
       </a>
     </div>
     <p class="text-sm text-gray-300 leading-relaxed">

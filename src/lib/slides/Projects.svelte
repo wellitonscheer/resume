@@ -8,7 +8,7 @@
         <h3 class="text-white font-medium">Ticket Helper</h3>
         <a href="https://github.com/wellitonscheer/ticket-helper" target="_blank"
           class="inline-flex items-center gap-1.5 shrink-0 bg-[#4a3f37]/60 text-gray-300 px-2.5 py-1 rounded-full text-xs hover:bg-[#5a4d43]/80 hover:text-white transition">
-          <i class="fab fa-github text-[10px]"></i> repo
+          <i class="fab fa-github text-[0.625rem]"></i> repo
         </a>
       </div>
       <p class="text-sm text-gray-300 mb-3">
@@ -65,7 +65,7 @@
         <h3 class="text-white font-medium">Rede Social CTI 2023</h3>
         <a href="https://github.com/wellitonscheer/rede-social-cti-2023" target="_blank"
           class="inline-flex items-center gap-1.5 shrink-0 bg-[#4a3f37]/60 text-gray-300 px-2.5 py-1 rounded-full text-xs hover:bg-[#5a4d43]/80 hover:text-white transition">
-          <i class="fab fa-github text-[10px]"></i> repo
+          <i class="fab fa-github text-[0.625rem]"></i> repo
         </a>
       </div>
       <p class="text-sm text-gray-300 mb-3">

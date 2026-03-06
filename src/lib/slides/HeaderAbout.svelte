@@ -37,7 +37,7 @@
   <section>
     <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-1">About</h2>
     <div class="w-8 h-0.5 bg-blue-500 rounded mb-4"></div>
-    <p class="text-gray-300 leading-relaxed text-[15px]">
+    <p class="text-gray-300 leading-relaxed text-[0.9375rem]">
       I'm a developer who has been working mostly with Go and TypeScript on backend projects.
       I've had the chance to learn about microservices, work with message queues, PostgreSQL, Docker,
       and explore AI integration through projects involving vector search and RAG systems.
