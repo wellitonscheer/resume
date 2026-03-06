@@ -94,23 +94,14 @@
 
 <svelte:window onkeydown={handleKeydown} />
 
-<div class="flex items-center justify-center min-h-screen p-4 md:p-8">
+<div class="flex items-center justify-center h-dvh overflow-hidden md:min-h-screen md:overflow-visible md:p-8">
   {#if isMobile}
     <!-- Mobile: vertical layout -->
-    <div class="flex flex-col items-center gap-4 w-full max-w-2xl">
-      <button
-        onclick={prev}
-        class="flex items-center justify-center w-11 h-11 rounded-full bg-gray-800/60 hover:bg-gray-700/80 text-gray-400 hover:text-white transition cursor-pointer"
-        aria-label="Previous slide"
-      >
-        <i class="fas fa-chevron-up"></i>
-      </button>
-
+    <div class="flex flex-col items-center w-full max-w-2xl h-dvh overflow-hidden px-4 py-2">
       <div
         role="region"
         aria-label="Resume carousel"
-        class="w-full overflow-hidden"
-        style="height: 85vh;"
+        class="w-full flex-1 min-h-0 overflow-hidden"
         ontouchstart={handleTouchStart}
         ontouchmove={handleTouchMove}
         ontouchend={handleTouchEnd}
@@ -127,16 +118,8 @@
         </div>
       </div>
 
-      <button
-        onclick={next}
-        class="flex items-center justify-center w-11 h-11 rounded-full bg-gray-800/60 hover:bg-gray-700/80 text-gray-400 hover:text-white transition cursor-pointer"
-        aria-label="Next slide"
-      >
-        <i class="fas fa-chevron-down"></i>
-      </button>
-
       <!-- Dots -->
-      <div class="flex gap-2">
+      <div class="flex gap-2 py-2">
         {#each slides as _, i}
           <button
             onclick={() => goTo(i)}
