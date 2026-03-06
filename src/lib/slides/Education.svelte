@@ -3,10 +3,10 @@
   <div class="w-8 h-0.5 bg-blue-500 rounded mb-5"></div>
 
   <div class="space-y-4">
-    <div class="bg-gray-800/40 rounded-lg p-4">
+    <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-1">
         <h3 class="text-white font-medium">PUCRS</h3>
-        <span class="inline-block text-xs text-gray-400 bg-gray-700/50 px-2 py-0.5 rounded shrink-0">Feb 2025 – Jul 2027</span>
+        <span class="inline-block text-xs text-gray-400 bg-[#4a3f37]/50 px-2 py-0.5 rounded shrink-0">Feb 2025 – Jul 2027</span>
       </div>
       <p class="text-sm text-gray-300">Database Technology (CST)</p>
       <p class="text-xs text-gray-500 mt-1">Data Analytics emphasis</p>
@@ -17,10 +17,10 @@
       </ul>
     </div>
 
-    <div class="bg-gray-800/40 rounded-lg p-4">
+    <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-1">
         <h3 class="text-white font-medium">Setrem</h3>
-        <span class="inline-block text-xs text-gray-400 bg-gray-700/50 px-2 py-0.5 rounded shrink-0">Feb 2021 – May 2025</span>
+        <span class="inline-block text-xs text-gray-400 bg-[#4a3f37]/50 px-2 py-0.5 rounded shrink-0">Feb 2021 – May 2025</span>
       </div>
       <p class="text-sm text-gray-300">Technical Education, Computer Science</p>
       <ul class="list-disc list-inside mt-2 text-sm text-gray-300 marker:text-gray-600">

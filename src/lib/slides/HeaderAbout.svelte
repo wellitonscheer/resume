@@ -3,26 +3,26 @@
   <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
     <div class="shrink-0 md:order-last">
       <img src="/me_center.jpg" alt="Welliton Scheer"
-           class="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-2 border-gray-700" />
+           class="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-2 border-[#4a3f37]" />
     </div>
     <div class="flex-1 min-w-0">
       <header class="text-center md:text-left">
         <h1 class="text-3xl font-bold text-white mb-1">Welliton Scheer</h1>
         <p class="text-lg text-gray-400 mb-4">Full-Stack Software Developer</p>
         <div class="flex flex-wrap justify-center md:justify-start gap-2.5 text-sm">
-          <span class="inline-flex items-center gap-1.5 bg-gray-800/60 text-gray-300 px-3 py-1 rounded-full">
+          <span class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full">
             <i class="fas fa-map-marker-alt text-xs"></i>RS, Brazil
           </span>
-          <a href="mailto:wellitonscheer@gmail.com" class="inline-flex items-center gap-1.5 bg-gray-800/60 text-gray-300 px-3 py-1 rounded-full hover:bg-gray-700/80 hover:text-white transition">
+          <a href="mailto:wellitonscheer@gmail.com" class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full hover:bg-[#4a3f37]/80 hover:text-white transition">
             <i class="fas fa-envelope text-xs"></i>Email
           </a>
-          <a href="https://github.com/wellitonscheer" target="_blank" class="inline-flex items-center gap-1.5 bg-gray-800/60 text-gray-300 px-3 py-1 rounded-full hover:bg-gray-700/80 hover:text-white transition">
+          <a href="https://github.com/wellitonscheer" target="_blank" class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full hover:bg-[#4a3f37]/80 hover:text-white transition">
             <i class="fab fa-github text-xs"></i>GitHub
           </a>
-          <a href="https://linkedin.com/in/welliton-scheer" target="_blank" class="inline-flex items-center gap-1.5 bg-gray-800/60 text-gray-300 px-3 py-1 rounded-full hover:bg-gray-700/80 hover:text-white transition">
+          <a href="https://linkedin.com/in/welliton-scheer" target="_blank" class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full hover:bg-[#4a3f37]/80 hover:text-white transition">
             <i class="fab fa-linkedin text-xs"></i>LinkedIn
           </a>
-          <span class="inline-flex items-center gap-1.5 bg-gray-800/60 text-gray-300 px-3 py-1 rounded-full">
+          <span class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full">
             <i class="fas fa-language text-xs"></i>PT (native) / EN (intermediate)
           </span>
         </div>
@@ -31,7 +31,7 @@
   </div>
 
   <!-- Divider (full width) -->
-  <div class="w-12 h-px bg-gray-700 mx-auto md:mx-0 my-6"></div>
+  <div class="w-12 h-px bg-[#4a3f37] mx-auto md:mx-0 my-6"></div>
 
   <!-- About (full width below) -->
   <section>

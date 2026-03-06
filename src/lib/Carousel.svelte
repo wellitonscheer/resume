@@ -111,7 +111,7 @@
           style="transform: {transform}"
         >
           {#each slides as Slide, i}
-            <div class="w-full shrink-0 h-full overflow-y-auto slide-content px-8 py-6 bg-gray-900 rounded-xl border border-gray-800">
+            <div class="w-full shrink-0 h-full overflow-y-auto slide-content px-8 py-6 bg-[#261f1b] rounded-xl border border-[#3a322c]">
               <Slide />
             </div>
           {/each}
@@ -134,7 +134,7 @@
     <div class="flex items-center gap-6 w-full max-w-5xl">
       <button
         onclick={prev}
-        class="flex items-center justify-center w-11 h-11 shrink-0 rounded-full bg-gray-800/60 hover:bg-gray-700/80 text-gray-400 hover:text-white transition cursor-pointer"
+        class="flex items-center justify-center w-11 h-11 shrink-0 rounded-full bg-[#3a322c]/60 hover:bg-[#4a3f37]/80 text-gray-400 hover:text-white transition cursor-pointer"
         aria-label="Previous slide"
       >
         <i class="fas fa-chevron-left"></i>
@@ -155,7 +155,7 @@
             style="transform: {transform}"
           >
             {#each slides as Slide, i}
-              <div class="w-full shrink-0 h-full overflow-y-auto slide-content px-8 py-6 bg-gray-900 rounded-xl border border-gray-800">
+              <div class="w-full shrink-0 h-full overflow-y-auto slide-content px-8 py-6 bg-[#261f1b] rounded-xl border border-[#3a322c]">
                 <Slide />
               </div>
             {/each}
@@ -176,7 +176,7 @@
 
       <button
         onclick={next}
-        class="flex items-center justify-center w-11 h-11 shrink-0 rounded-full bg-gray-800/60 hover:bg-gray-700/80 text-gray-400 hover:text-white transition cursor-pointer"
+        class="flex items-center justify-center w-11 h-11 shrink-0 rounded-full bg-[#3a322c]/60 hover:bg-[#4a3f37]/80 text-gray-400 hover:text-white transition cursor-pointer"
         aria-label="Next slide"
       >
         <i class="fas fa-chevron-right"></i>

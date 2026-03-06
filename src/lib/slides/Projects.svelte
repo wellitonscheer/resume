@@ -3,11 +3,11 @@
   <div class="w-8 h-0.5 bg-blue-500 rounded mb-5"></div>
 
   <div class="space-y-4">
-    <div class="bg-gray-800/40 rounded-lg p-4">
+    <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-2">
         <h3 class="text-white font-medium">Ticket Helper</h3>
         <a href="https://github.com/wellitonscheer/ticket-helper" target="_blank"
-          class="inline-flex items-center gap-1.5 shrink-0 bg-gray-700/60 text-gray-300 px-2.5 py-1 rounded-full text-xs hover:bg-gray-600/80 hover:text-white transition">
+          class="inline-flex items-center gap-1.5 shrink-0 bg-[#4a3f37]/60 text-gray-300 px-2.5 py-1 rounded-full text-xs hover:bg-[#5a4d43]/80 hover:text-white transition">
           <i class="fab fa-github text-[10px]"></i> repo
         </a>
       </div>
@@ -16,16 +16,16 @@
         You describe an issue in plain language and it finds similar tickets using vector embeddings and RAG.
       </p>
       <div class="flex flex-wrap gap-1.5">
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Go</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Gin</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">PostgreSQL</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">PgVector</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Docker</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">SMTP</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Go</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Gin</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">PostgreSQL</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">PgVector</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Docker</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">SMTP</span>
       </div>
     </div>
 
-    <div class="bg-gray-800/40 rounded-lg p-4">
+    <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-2">
         <h3 class="text-white font-medium">Setrem Eventos</h3>
         <span class="inline-flex items-center shrink-0 bg-blue-500/15 text-blue-400 px-2.5 py-1 rounded-full text-xs">company</span>
@@ -35,17 +35,17 @@
         and admin dashboards. Microservices architecture for dashboard, queues, webhooks, and backups.
       </p>
       <div class="flex flex-wrap gap-1.5">
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">TypeScript</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">PostgreSQL</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Docker</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">RabbitMQ</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Prisma</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Turborepo</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">TypeScript</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">PostgreSQL</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Docker</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">RabbitMQ</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Prisma</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Turborepo</span>
       </div>
     </div>
 
-    <div class="bg-gray-800/40 rounded-lg p-4">
+    <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-2">
         <h3 class="text-white font-medium">Setrem Matrículas</h3>
         <span class="inline-flex items-center shrink-0 bg-blue-500/15 text-blue-400 px-2.5 py-1 rounded-full text-xs">company</span>
@@ -54,17 +54,17 @@
         Student registration system for managing enrollment and course selection.
       </p>
       <div class="flex flex-wrap gap-1.5">
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">TypeScript</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">PostgreSQL</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">TypeScript</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">PostgreSQL</span>
       </div>
     </div>
 
-    <div class="bg-gray-800/40 rounded-lg p-4">
+    <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-2">
         <h3 class="text-white font-medium">Rede Social CTI 2023</h3>
         <a href="https://github.com/wellitonscheer/rede-social-cti-2023" target="_blank"
-          class="inline-flex items-center gap-1.5 shrink-0 bg-gray-700/60 text-gray-300 px-2.5 py-1 rounded-full text-xs hover:bg-gray-600/80 hover:text-white transition">
+          class="inline-flex items-center gap-1.5 shrink-0 bg-[#4a3f37]/60 text-gray-300 px-2.5 py-1 rounded-full text-xs hover:bg-[#5a4d43]/80 hover:text-white transition">
           <i class="fab fa-github text-[10px]"></i> repo
         </a>
       </div>
@@ -73,9 +73,9 @@
         Worked on frontend components and backend integration.
       </p>
       <div class="flex flex-wrap gap-1.5">
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">TypeScript</span>
-        <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Turborepo</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">TypeScript</span>
+        <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Turborepo</span>
       </div>
     </div>
   </div>
