@@ -1,10 +1,11 @@
 # Resume
 
-Static HTML resume and LaTeX PDF for Welliton Scheer. No build system, no JavaScript — just plain HTML and a `.tex` file.
+Svelte 5 carousel resume and portfolio for Welliton Scheer. Built with Vite, Tailwind CSS v4, and deployed on Cloudflare Pages.
 
 ## Tech Stack
 
-- HTML with [Tailwind CSS](https://tailwindcss.com/) (CDN)
+- [Svelte 5](https://svelte.dev/) + [Vite](https://vitejs.dev/) (single-page static site)
+- [Tailwind CSS v4](https://tailwindcss.com/) via `@tailwindcss/vite`
 - [Font Awesome](https://fontawesome.com/) icons
 - [Inter](https://fonts.google.com/specimen/Inter) font (Google Fonts)
 - LaTeX for PDF generation
@@ -13,20 +14,37 @@ Static HTML resume and LaTeX PDF for Welliton Scheer. No build system, no JavaSc
 
 ```
 resume/
-├── index.html   # Resume website (dark, single-column layout)
-├── resume.tex   # LaTeX resume for PDF compilation
-├── icon.png     # Favicon
-└── README.md
+├── src/
+│   ├── App.svelte                  # Root component
+│   └── lib/
+│       ├── Carousel.svelte         # Carousel logic (arrows, dots, swipe, keyboard)
+│       └── slides/
+│           ├── HeaderAbout.svelte
+│           ├── Experience.svelte
+│           ├── OpenSource.svelte
+│           ├── Projects.svelte
+│           ├── Technologies.svelte
+│           └── Education.svelte
+├── public/
+│   └── icon.png                    # Favicon
+├── resume.tex                      # LaTeX resume for PDF compilation
+├── index.html
+├── vite.config.js
+└── package.json
 ```
 
 ## Running Locally
 
-Open `index.html` directly in a browser, or serve it:
-
 ```bash
-python -m http.server 8000
-# Visit http://localhost:8000
+npm install
+npm run dev       # Start dev server
+npm run build     # Build to dist/
+npm run preview   # Preview production build
 ```
+
+## Deployment
+
+Hosted on [Cloudflare Pages](https://pages.cloudflare.com/). Build command: `npm run build`, output directory: `dist`.
 
 ## PDF Version
 
@@ -34,4 +52,4 @@ python -m http.server 8000
 
 ## Keeping in Sync
 
-Both `index.html` and `resume.tex` contain the same resume content. Update both when making changes to experience, projects, skills, education, or open source contributions.
+The Svelte slide components (`src/lib/slides/`) and `resume.tex` contain the same resume content. Update both when making changes to experience, projects, skills, education, or open source contributions.

@@ -32,8 +32,7 @@
       </div>
       <p class="text-sm text-gray-300 mb-3">
         Event management system for an educational institution. Handles registrations, payments,
-        and admin dashboards. Built with a microservices architecture — separate services for
-        the dashboard, queues, webhooks, and backups.
+        and admin dashboards. Microservices architecture for dashboard, queues, webhooks, and backups.
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
@@ -48,11 +47,11 @@
 
     <div class="bg-gray-800/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-2">
-        <h3 class="text-white font-medium">Setrem Matriculas</h3>
+        <h3 class="text-white font-medium">Setrem Matrículas</h3>
         <span class="inline-flex items-center shrink-0 bg-blue-500/15 text-blue-400 px-2.5 py-1 rounded-full text-xs">company</span>
       </div>
       <p class="text-sm text-gray-300 mb-3">
-        Student registration system for managing enrollment and course selection. Similar stack to Setrem Eventos.
+        Student registration system for managing enrollment and course selection.
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
@@ -71,7 +70,7 @@
       </div>
       <p class="text-sm text-gray-300 mb-3">
         Social networking project from my technical education.
-        Worked on frontend components and helped with backend integration.
+        Worked on frontend components and backend integration.
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="bg-gray-800 text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
