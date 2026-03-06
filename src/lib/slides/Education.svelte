@@ -10,6 +10,11 @@
       </div>
       <p class="text-sm text-gray-300">Database Technology (CST)</p>
       <p class="text-xs text-gray-500 mt-1">Data Analytics emphasis</p>
+      <ul class="list-disc list-inside mt-2 text-sm text-gray-300 marker:text-gray-600">
+        <li>Data & AI: Python, NumPy, Matplotlib, Power BI, Machine Learning, Statistics</li>
+        <li>Development: SQL, NoSQL (MongoDB, Neo4j), OOP, Software Engineering</li>
+        <li>Business: Business Intelligence (OLAP), Data Warehousing, Data Storytelling</li>
+      </ul>
     </div>
 
     <div class="bg-gray-800/40 rounded-lg p-4">
@@ -18,6 +23,11 @@
         <span class="inline-block text-xs text-gray-400 bg-gray-700/50 px-2 py-0.5 rounded shrink-0">Feb 2021 – May 2025</span>
       </div>
       <p class="text-sm text-gray-300">Technical Education, Computer Science</p>
+      <ul class="list-disc list-inside mt-2 text-sm text-gray-300 marker:text-gray-600">
+        <li>Hardware & Infrastructure: Arduino/IoT, Windows Server, Networking, Office 365</li>
+        <li>Web & Mobile: React, Next.js, PHP, JavaScript, Bootstrap, Flutter, Firebase</li>
+        <li>Backend & Data: REST APIs (ASP.NET), SQL, MySQL, Relational Databases</li>
+      </ul>
     </div>
   </div>
 </section>
