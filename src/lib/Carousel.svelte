@@ -7,6 +7,9 @@
   let isMobile = $state(false)
   let touchStartX = 0
   let touchStartY = 0
+  let touchStartScrollTop = 0
+  let contentScrolledDuringTouch = false
+  let slideContainer = null
 
   const total = $derived(slides.length)
   const transform = $derived(
@@ -40,6 +43,21 @@
   function handleTouchStart(e) {
     touchStartX = e.touches[0].clientX
     touchStartY = e.touches[0].clientY
+    contentScrolledDuringTouch = false
+    slideContainer = e.target.closest('.slide-content')
+    if (slideContainer) {
+      touchStartScrollTop = slideContainer.scrollTop
+    }
+  }
+
+  function handleTouchMove(e) {
+    if (!isMobile || !slideContainer) return
+    const dy = e.touches[0].clientY - touchStartY
+    const { scrollTop, scrollHeight, clientHeight } = slideContainer
+    const isScrollable = scrollHeight > clientHeight
+    if (isScrollable && !((dy > 0 && scrollTop <= 0) || (dy < 0 && scrollTop + clientHeight >= scrollHeight - 1))) {
+      contentScrolledDuringTouch = true
+    }
   }
 
   function handleTouchEnd(e) {
@@ -48,6 +66,10 @@
     const threshold = 50
 
     if (isMobile) {
+      if (contentScrolledDuringTouch) {
+        slideContainer = null
+        return
+      }
       if (Math.abs(dy) > threshold && Math.abs(dy) > Math.abs(dx)) {
         if (dy < 0) next()
         else prev()
@@ -58,6 +80,7 @@
         else prev()
       }
     }
+    slideContainer = null
   }
 
   onMount(() => {
@@ -89,6 +112,7 @@
         class="w-full overflow-hidden"
         style="height: 85vh;"
         ontouchstart={handleTouchStart}
+        ontouchmove={handleTouchMove}
         ontouchend={handleTouchEnd}
       >
         <div
@@ -140,6 +164,7 @@
           class="w-full overflow-hidden"
           style="height: 85vh;"
           ontouchstart={handleTouchStart}
+          ontouchmove={handleTouchMove}
           ontouchend={handleTouchEnd}
         >
           <div
