@@ -3,7 +3,8 @@
 \usepackage[margin=0.7in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
@@ -33,8 +34,14 @@
 % Remove page numbers
 \pagestyle{empty}
 
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
+
+% Line spacing
+\linespread{1.05}
+
 % Compact lists
-\setlist[itemize]{nosep, leftmargin=1.5em, label={--}}
+\setlist[itemize]{nosep, leftmargin=1.5em, label={\textbullet}, itemsep=2pt}
 
 \begin{document}
 
@@ -92,8 +99,8 @@ Open-source contributor. Currently studying Database Technology with a focus on 
 
 \textbf{spf13/pflag --- Fix getFlagType error message}
 \hfill \href{https://github.com/spf13/pflag/pull/462}{\small PR \#462} \\
-While using the pflag library in a Go project, I ran into a confusing error message.
-Dug into the source to understand what was going on and found the bug --- the error was
+While using the cobra package in a Go project, I ran into a confusing error message from pflag.
+Dug into the source to understand what was going on and found the bug, the error was
 referencing the wrong flag type. Opened a PR with the fix and it got merged.
 
 % ---- Projects ----
@@ -126,10 +133,11 @@ Social networking project from my technical education. Worked on frontend compon
 \section{Technologies}
 
 \begin{tabular}{@{} l l}
-  \textbf{Languages:} & Go · TypeScript · Python · JavaScript \\
+  \textbf{Languages:} & Go · TypeScript · C\# · Python · JavaScript · Bash \\
   \textbf{Frameworks:} & Next.js · React · Gin · HTMX · Tailwind CSS \\
-  \textbf{Databases:} & PostgreSQL · Prisma · PgVector \\
-  \textbf{Infrastructure:} & Docker · AWS Lambda · RabbitMQ \\
+  \textbf{Databases:} & PostgreSQL · DynamoDB · Firebase · Prisma · PgVector \\
+  \textbf{Tools \& Infra:} & Linux · Docker · Git · GitHub Actions · AWS (Lambda · S3) · Traefik · Cloudflare Workers \\
+  \textbf{Services:} & RabbitMQ · N8N · Stripe \\
   \textbf{Other:} & RAG systems · Vector embeddings · Semantic search \\
 \end{tabular}
 
