@@ -1,0 +1,146 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=0.7in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Colors
+\definecolor{accent}{HTML}{1e3a8a}
+\definecolor{muted}{HTML}{555555}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+}
+
+% Section formatting
+\titleformat{\section}
+  {\large\bfseries\color{accent}\uppercase}
+  {}
+  {0em}
+  {}
+  [\vspace{-0.5em}\rule{\linewidth}{0.4pt}]
+
+\titlespacing{\section}{0pt}{1em}{0.5em}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Compact lists
+\setlist[itemize]{nosep, leftmargin=1.5em, label={--}}
+
+\begin{document}
+
+% ---- Header ----
+\begin{center}
+  {\LARGE\bfseries Welliton Scheer} \\[4pt]
+  {\color{muted} Full-Stack Software Developer} \\[4pt]
+  {\small
+    RS, Brazil \quad
+    \href{mailto:wellitonscheer@gmail.com}{wellitonscheer@gmail.com} \quad
+    \href{https://github.com/wellitonscheer}{github.com/wellitonscheer} \quad
+    \href{https://linkedin.com/in/welliton-scheer}{linkedin.com/in/welliton-scheer}
+  } \\[2pt]
+  {\small\color{muted} Portuguese (native) · English (intermediate)}
+\end{center}
+
+% ---- Summary ----
+\section{Summary}
+
+Full-stack developer with \texttildelow 4 years of experience building backend services in Go and TypeScript.
+Worked with microservices, PostgreSQL, Docker, RabbitMQ, and AI integration (RAG, vector search).
+Open-source contributor. Currently studying Database Technology with a focus on Data Analytics.
+
+% ---- Experience ----
+\section{Experience}
+
+\textbf{Full Stack Developer --- Setrem} \hfill {\small Oct 2023 -- Present · \texttildelow 2 yrs 5 mos} \\
+{\small\color{muted} Sociedade Educacional Três de Maio}
+\begin{itemize}
+  \item Go + TypeScript: Built internal tools and educational platforms serving students and staff across multiple Setrem systems
+  \item Microservices: Designed service-based architecture using RabbitMQ for async processing and Docker for deployment
+  \item API optimization: Created a PATCH endpoint for partial form updates, reducing payload from \texttildelow 5--10\,KB to \texttildelow 200--500\,B and cutting DB writes by \texttildelow 80\%
+  \item Monorepo: Set up and maintained Turborepo monorepo shared across multiple Next.js applications
+  \item AI/RAG: Integrated vector embeddings and semantic search into a support ticket tool (PgVector, Go)
+\end{itemize}
+
+\vspace{0.3em}
+\textbf{Software Developer --- A1 Lab} \hfill {\small Nov 2022 -- Oct 2023 · 1 yr} \\
+{\small\color{muted} Freelance · Remote}
+\begin{itemize}
+  \item AWS: Built serverless API services using Python with Lambda and CloudFormation
+  \item Caching: Implemented a DynamoDB caching layer to avoid redundant third-party API calls, reducing response time from \texttildelow 1.5\,s to \texttildelow 300\,ms
+  \item Data: Worked on data processing pipelines and storage solutions with DynamoDB
+\end{itemize}
+
+\vspace{0.3em}
+\textbf{Software Developer (Apprentice) --- Setrem} \hfill {\small Feb 2021 -- Nov 2022 · 1 yr 10 mos}
+\begin{itemize}
+  \item Learned the fundamentals of web development and collaborative coding
+  \item Assisted with development tasks and basic programming assignments
+\end{itemize}
+
+% ---- Open Source ----
+\section{Open Source}
+
+\textbf{spf13/pflag --- Fix getFlagType error message}
+\hfill \href{https://github.com/spf13/pflag/pull/462}{\small PR \#462} \\
+While using the pflag library in a Go project, I ran into a confusing error message.
+Dug into the source to understand what was going on and found the bug --- the error was
+referencing the wrong flag type. Opened a PR with the fix and it got merged.
+
+% ---- Projects ----
+\section{Projects}
+
+\textbf{Ticket Helper}
+\hfill \href{https://github.com/wellitonscheer/ticket-helper}{\small github} \\
+A tool I built to help organize and search support tickets using AI.
+You describe an issue in plain language and it finds similar tickets using vector embeddings and RAG. \\
+{\small\color{muted} Go · Gin · PostgreSQL · PgVector · Docker · SMTP}
+
+\vspace{0.3em}
+\textbf{Setrem Eventos} {\small\color{muted} (company project)} \\
+Event management system for an educational institution. Handles registrations, payments,
+and admin dashboards. Microservices architecture for dashboard, queues, webhooks, and backups. \\
+{\small\color{muted} Next.js · TypeScript · PostgreSQL · Docker · RabbitMQ · Prisma · Turborepo}
+
+\vspace{0.3em}
+\textbf{Setrem Matrículas} {\small\color{muted} (company project)} \\
+Student registration system for managing enrollment and course selection. \\
+{\small\color{muted} Next.js · TypeScript · PostgreSQL}
+
+\vspace{0.3em}
+\textbf{Rede Social CTI 2023}
+\hfill \href{https://github.com/wellitonscheer/rede-social-cti-2023}{\small github} \\
+Social networking project from my technical education. Worked on frontend components and backend integration. \\
+{\small\color{muted} Next.js · TypeScript · Turborepo}
+
+% ---- Technologies ----
+\section{Technologies}
+
+\begin{tabular}{@{} l l}
+  \textbf{Languages:} & Go · TypeScript · Python · JavaScript \\
+  \textbf{Frameworks:} & Next.js · React · Gin · HTMX · Tailwind CSS \\
+  \textbf{Databases:} & PostgreSQL · Prisma · PgVector \\
+  \textbf{Infrastructure:} & Docker · AWS Lambda · RabbitMQ \\
+  \textbf{Other:} & RAG systems · Vector embeddings · Semantic search \\
+\end{tabular}
+
+% ---- Education ----
+\section{Education}
+
+\textbf{PUCRS} \hfill {\small Feb 2025 -- Jul 2027} \\
+{\small Database Technology (CST) --- Data Analytics emphasis}
+
+\vspace{0.3em}
+\textbf{Setrem} \hfill {\small Feb 2021 -- May 2025} \\
+{\small Technical Education, Computer Science}
+
+\end{document}
