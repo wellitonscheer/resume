@@ -1,8 +1,19 @@
+<script>
+  import { profilePhotoBase64 } from '../imageFallbacks.js'
+
+  let photoSrc = $state('/me_center.jpg')
+
+  function handleImgError() {
+    photoSrc = profilePhotoBase64
+  }
+</script>
+
 <div>
   <!-- Top row: name+pills left, photo right -->
   <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
     <div class="shrink-0 md:order-last">
-      <img src="/me_center.jpg" alt="Welliton Scheer"
+      <img src={photoSrc} alt="Welliton Scheer"
+           onerror={handleImgError}
            class="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-2 border-[#4a3f37]" />
     </div>
     <div class="flex-1 min-w-0">
