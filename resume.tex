@@ -61,8 +61,11 @@
 % ---- Summary ----
 \section{Summary}
 
-Full-stack developer with \texttildelow 4 years of experience building backend services in Go and TypeScript.
-Worked with microservices, PostgreSQL, Docker, RabbitMQ, and AI integration (RAG, vector search).
+Full-stack developer focused on building tools that replace manual processes and save time.
+At Setrem, built platforms used by \texttildelow 1,000 people --- digitizing paper-based evaluations,
+automating report writing with AI, and enabling online enrollment.
+Works mostly with Go and TypeScript on backend services, with experience in microservices,
+message queues, PostgreSQL, Docker, and AI integration (vector search, RAG, Claude API).
 Open-source contributor. Currently studying Database Technology with a focus on Data Analytics.
 
 % ---- Experience ----
@@ -71,20 +74,21 @@ Open-source contributor. Currently studying Database Technology with a focus on 
 \textbf{Full Stack Developer --- Setrem} \hfill {\small Oct 2023 -- Present · \texttildelow 2 yrs 5 mos} \\
 {\small\color{muted} Sociedade Educacional Três de Maio}
 \begin{itemize}
-  \item Go + TypeScript: Built internal tools and educational platforms serving students and staff across multiple Setrem systems
-  \item Microservices: Designed service-based architecture using RabbitMQ for async processing and Docker for deployment
-  \item API optimization: Created a PATCH endpoint for partial form updates, reducing payload from \texttildelow 5--10\,KB to \texttildelow 200--500\,B and cutting DB writes by \texttildelow 80\%
-  \item Monorepo: Set up and maintained Turborepo monorepo shared across multiple Next.js applications
-  \item AI/RAG: Integrated vector embeddings and semantic search into a support ticket tool (PgVector, Go)
+  \item Built an event management platform for \texttildelow 1,000 users, replacing a paper-based evaluation process --- professors now score projects digitally, eliminating manual data migration and accelerating result delivery
+  \item Built an online enrollment system that replaced in-person document submission --- staff review, request changes, and process enrollments entirely online, connected to the school's primary system for subject selection
+  \item Designed queue-based email delivery with RabbitMQ ensuring zero lost notifications, and containerized all services with Docker for rapid failure recovery and one-command redeployment
+  \item Replaced a delete-and-reinsert form-save pattern with partial PATCH updates --- reduced payload by \texttildelow 95\%, cut unnecessary DB writes by \texttildelow 80\%, and eliminated data inconsistency risks
+  \item Integrated semantic search into a support ticket system using vector embeddings (PgVector, Go) --- replaced a slow, content-blind manual search with natural-language queries
+  \item Automated educational report writing with n8n and AI --- professors send evaluation notes via email and receive properly formatted reports, replacing a paid manual process
+  \item Migrated 40+ repositories from self-hosted Gitea to GitHub with a custom Bash script, decommissioning an internal server and freeing infrastructure resources
 \end{itemize}
 
 \vspace{0.3em}
 \textbf{Software Developer --- A1 Lab} \hfill {\small Nov 2022 -- Oct 2023 · 1 yr} \\
 {\small\color{muted} Freelance · Remote}
 \begin{itemize}
-  \item AWS: Built serverless API services using Python with Lambda and CloudFormation
-  \item Caching: Implemented a DynamoDB caching layer to avoid redundant third-party API calls, reducing response time from \texttildelow 1.5\,s to \texttildelow 300\,ms
-  \item Data: Worked on data processing pipelines and storage solutions with DynamoDB
+  \item Built serverless API services for a gym platform --- handled nearest-gym matching and privacy-preserving location randomization for user safety
+  \item Implemented a DynamoDB caching layer that cut API response time from \texttildelow 1.5\,s to \texttildelow 300\,ms by eliminating redundant third-party calls
 \end{itemize}
 
 \vspace{0.3em}
@@ -108,26 +112,39 @@ referencing the wrong flag type. Opened a PR with the fix and it got merged.
 
 \textbf{Ticket Helper}
 \hfill \href{https://github.com/wellitonscheer/ticket-helper}{\small github} \\
-A tool I built to help organize and search support tickets using AI.
-You describe an issue in plain language and it finds similar tickets using vector embeddings and RAG. \\
-{\small\color{muted} Go · Gin · PostgreSQL · PgVector · Docker · SMTP}
+AI-powered support ticket search tool --- users describe issues in natural language and find similar tickets
+through vector embeddings and semantic search, even without knowing the exact keywords.
+Built to replace a slow, content-blind search system. \\
+{\small\color{muted} Go · Gin · PostgreSQL · PgVector · Docker}
+
+\vspace{0.3em}
+\textbf{Gera Parecer} {\small\color{muted} (company project)} \\
+AI-powered educational report generator --- teachers input diagnostic observations and receive properly
+formatted evaluation reports using Claude AI. \\
+{\small\color{muted} Go · React · PostgreSQL · Claude API · n8n}
+
+\vspace{0.3em}
+\textbf{Proxy Pagamentos} {\small\color{muted} (company project)} \\
+Payment gateway proxy handling transactions for multiple institutional systems (\texttildelow 1,000 users).
+Centralizes payment processing, organizes multi-project billing, and manages subscriptions. \\
+{\small\color{muted} TypeScript · PostgreSQL · RabbitMQ · AWS · Docker · Turborepo}
 
 \vspace{0.3em}
 \textbf{Setrem Eventos} {\small\color{muted} (company project)} \\
-Event management system for an educational institution. Handles registrations, payments,
-and admin dashboards. Microservices architecture for dashboard, queues, webhooks, and backups. \\
-{\small\color{muted} Next.js · TypeScript · PostgreSQL · Docker · RabbitMQ · Prisma · Turborepo}
+Event management platform for \texttildelow 1,000 users across an educational institution. Replaced paper-based
+project evaluation with a digital system --- handles registrations, project submissions, evaluator scoring,
+payments, certificate generation, and admin dashboards.
+Integrated CloudWatch logging for quick diagnosis of user-facing issues. \\
+{\small\color{muted} Next.js · TypeScript · PostgreSQL · RabbitMQ · Docker · Prisma · Turborepo · CloudWatch}
 
 \vspace{0.3em}
 \textbf{Setrem Matrículas} {\small\color{muted} (company project)} \\
-Student registration system for managing enrollment and course selection. \\
+Online student enrollment system that eliminated in-person document submission. Staff review documents,
+request corrections, and approve enrollments online --- connected to the school's primary system for
+subject selection and scheduling. \\
 {\small\color{muted} Next.js · TypeScript · PostgreSQL}
 
-\vspace{0.3em}
-\textbf{Rede Social CTI 2023}
-\hfill \href{https://github.com/wellitonscheer/rede-social-cti-2023}{\small github} \\
-Social networking project from my technical education. Worked on frontend components and backend integration. \\
-{\small\color{muted} Next.js · TypeScript · Turborepo}
+
 
 % ---- Technologies ----
 \section{Technologies}

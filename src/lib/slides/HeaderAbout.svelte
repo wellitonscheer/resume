@@ -49,13 +49,13 @@
     <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-1">About</h2>
     <div class="w-8 h-0.5 bg-blue-500 rounded mb-4"></div>
     <p class="text-gray-300 leading-relaxed text-[0.9375rem]">
-      I'm a developer who has been working mostly with Go and TypeScript on backend projects.
-      I've had the chance to learn about microservices, work with message queues, PostgreSQL, Docker,
-      and explore AI integration through projects involving vector search and RAG systems.
-      I like understanding how things work under the hood — when I hit a bug in a library I was using,
-      I went into the source code and ended up contributing a fix.
+      Full-stack developer focused on building tools that replace manual processes and save time.
+      At Setrem, I built platforms used by ~1,000 people — digitizing paper-based evaluations,
+      automating report writing with AI, and enabling online enrollment.
+      I work mostly with Go and TypeScript on backend services, and have experience with
+      microservices, message queues, PostgreSQL, Docker, and AI integration (vector search, RAG, Claude API).
+      When I hit a bug in a library I was using, I dug into the source code and contributed a fix upstream.
       Currently studying Database Technology with a focus on Data Analytics.
-      Always trying to learn more and get better at what I do.
     </p>
   </section>
 </div>
