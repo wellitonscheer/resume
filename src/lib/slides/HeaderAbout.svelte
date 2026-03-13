@@ -20,22 +20,29 @@
       <header class="text-center md:text-left">
         <h1 class="text-3xl font-bold text-white mb-1">Welliton Scheer</h1>
         <p class="text-lg text-gray-400 mb-4">Full-Stack Software Developer</p>
-        <div class="flex flex-wrap justify-center md:justify-start gap-2.5 text-sm">
-          <span class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full">
-            <i class="fas fa-map-marker-alt text-xs"></i>RS, Brazil
-          </span>
-          <a href="mailto:wellitonscheer@gmail.com" class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full hover:bg-[#4a3f37]/80 hover:text-white transition">
-            <i class="fas fa-envelope text-xs"></i>Email
-          </a>
-          <a href="https://github.com/wellitonscheer" target="_blank" class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full hover:bg-[#4a3f37]/80 hover:text-white transition">
-            <i class="fab fa-github text-xs"></i>GitHub
-          </a>
-          <a href="https://linkedin.com/in/welliton-scheer" target="_blank" class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full hover:bg-[#4a3f37]/80 hover:text-white transition">
-            <i class="fab fa-linkedin text-xs"></i>LinkedIn
-          </a>
-          <span class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full">
-            <i class="fas fa-language text-xs"></i>PT (native) / EN (intermediate)
-          </span>
+        <div class="flex flex-col gap-2 text-sm">
+          <div class="flex flex-wrap justify-center md:justify-start gap-2.5">
+            <span class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full">
+              <i class="fas fa-map-marker-alt text-xs"></i>Três de Maio, RS, Brazil
+            </span>
+            <a href="mailto:wellitonscheer@gmail.com" class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full hover:bg-[#4a3f37]/80 hover:text-white transition">
+              <i class="fas fa-envelope text-xs"></i>Email
+            </a>
+            <a href="https://github.com/wellitonscheer" target="_blank" class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full hover:bg-[#4a3f37]/80 hover:text-white transition">
+              <i class="fab fa-github text-xs"></i>GitHub
+            </a>
+            <a href="https://linkedin.com/in/welliton-scheer" target="_blank" class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full hover:bg-[#4a3f37]/80 hover:text-white transition">
+              <i class="fab fa-linkedin text-xs"></i>LinkedIn
+            </a>
+          </div>
+          <div class="flex flex-wrap justify-center md:justify-start gap-2.5">
+            <span class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full">
+              <i class="fas fa-globe text-xs"></i>Open to remote work (independent contractor)
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full">
+              <i class="fas fa-language text-xs"></i>PT (native) / EN (professional working)
+            </span>
+          </div>
         </div>
       </header>
     </div>
