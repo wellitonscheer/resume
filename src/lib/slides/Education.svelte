@@ -1,6 +1,6 @@
 <section>
   <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-1">Education</h2>
-  <div class="w-8 h-0.5 bg-blue-500 rounded mb-5"></div>
+  <div class="w-8 h-0.5 bg-[var(--accent-amber-bright)] rounded mb-5"></div>
 
   <div class="space-y-4">
     <div class="bg-[#3a322c]/40 rounded-lg p-4">

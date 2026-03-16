@@ -36,7 +36,7 @@
             </a>
           </div>
           <div class="flex flex-wrap justify-center md:justify-start gap-2.5">
-            <span class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full">
+            <span class="inline-flex items-center gap-1.5 bg-[var(--accent-sage-10)] text-[var(--accent-sage)] px-3 py-1 rounded-full">
               <i class="fas fa-globe text-xs"></i>Open to remote work (independent contractor)
             </span>
             <span class="inline-flex items-center gap-1.5 bg-[#3a322c]/60 text-gray-300 px-3 py-1 rounded-full">
@@ -54,7 +54,7 @@
   <!-- About (full width below) -->
   <section>
     <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-1">About</h2>
-    <div class="w-8 h-0.5 bg-blue-500 rounded mb-4"></div>
+    <div class="w-8 h-0.5 bg-[var(--accent-amber-bright)] rounded mb-4"></div>
     <p class="text-gray-300 leading-relaxed text-[0.9375rem]">
       Full-stack developer focused on building tools that replace manual processes and save time.
       At Setrem, I built platforms used by ~1,000 people — digitizing paper-based evaluations,

@@ -1,6 +1,6 @@
 <section>
   <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-1">Projects</h2>
-  <div class="w-8 h-0.5 bg-blue-500 rounded mb-5"></div>
+  <div class="w-8 h-0.5 bg-[var(--accent-amber-bright)] rounded mb-5"></div>
 
   <div class="space-y-4">
     <div class="bg-[#3a322c]/40 rounded-lg p-4">
@@ -26,7 +26,7 @@
     <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-2">
         <h3 class="text-white font-medium">Gera Parecer</h3>
-        <span class="inline-flex items-center shrink-0 bg-blue-500/15 text-blue-400 px-2.5 py-1 rounded-full text-xs">company</span>
+        <span class="inline-flex items-center shrink-0 bg-[var(--accent-teal-15)] text-[var(--accent-teal)] px-2.5 py-1 rounded-full text-xs">company</span>
       </div>
       <p class="text-sm text-gray-300 mb-3">
         AI-powered educational report generator — teachers input diagnostic observations and receive properly formatted evaluation reports using Claude AI.
@@ -43,7 +43,7 @@
     <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-2">
         <h3 class="text-white font-medium">Proxy Pagamentos</h3>
-        <span class="inline-flex items-center shrink-0 bg-blue-500/15 text-blue-400 px-2.5 py-1 rounded-full text-xs">company</span>
+        <span class="inline-flex items-center shrink-0 bg-[var(--accent-teal-15)] text-[var(--accent-teal)] px-2.5 py-1 rounded-full text-xs">company</span>
       </div>
       <p class="text-sm text-gray-300 mb-3">
         Payment gateway proxy handling transactions for multiple institutional systems (~1,000 users). Centralizes payment processing, organizes multi-project billing, and manages subscriptions.
@@ -61,7 +61,7 @@
     <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-2">
         <h3 class="text-white font-medium">Setrem Eventos</h3>
-        <span class="inline-flex items-center shrink-0 bg-blue-500/15 text-blue-400 px-2.5 py-1 rounded-full text-xs">company</span>
+        <span class="inline-flex items-center shrink-0 bg-[var(--accent-teal-15)] text-[var(--accent-teal)] px-2.5 py-1 rounded-full text-xs">company</span>
       </div>
       <p class="text-sm text-gray-300 mb-3">
         Event management platform for ~1,000 users across an educational institution. Replaced paper-based project evaluation with a digital system — handles registrations, project submissions, evaluator scoring, payments, certificate generation, and admin dashboards. Integrated CloudWatch logging for quick diagnosis of user-facing issues.
@@ -81,7 +81,7 @@
     <div class="bg-[#3a322c]/40 rounded-lg p-4">
       <div class="flex items-start justify-between gap-3 mb-2">
         <h3 class="text-white font-medium">Setrem Matrículas</h3>
-        <span class="inline-flex items-center shrink-0 bg-blue-500/15 text-blue-400 px-2.5 py-1 rounded-full text-xs">company</span>
+        <span class="inline-flex items-center shrink-0 bg-[var(--accent-teal-15)] text-[var(--accent-teal)] px-2.5 py-1 rounded-full text-xs">company</span>
       </div>
       <p class="text-sm text-gray-300 mb-3">
         Online student enrollment system that eliminated in-person document submission. Staff review documents, request corrections, and approve enrollments online — connected to the school's primary system for subject selection and scheduling.

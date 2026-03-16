@@ -123,7 +123,7 @@
         {#each slides as _, i}
           <button
             onclick={() => goTo(i)}
-            class="w-2 h-2 rounded-full transition cursor-pointer {i === currentIndex ? 'bg-white' : 'bg-gray-600 hover:bg-gray-500'}"
+            class="w-2 h-2 rounded-full transition cursor-pointer {i === currentIndex ? 'bg-[var(--accent-amber-bright)]' : 'bg-gray-600 hover:bg-gray-500'}"
             aria-label="Go to slide {i + 1}"
           ></button>
         {/each}
@@ -167,7 +167,7 @@
           {#each slides as _, i}
             <button
               onclick={() => goTo(i)}
-              class="w-2 h-2 rounded-full transition cursor-pointer {i === currentIndex ? 'bg-white' : 'bg-gray-600 hover:bg-gray-500'}"
+              class="w-2 h-2 rounded-full transition cursor-pointer {i === currentIndex ? 'bg-[var(--accent-amber-bright)]' : 'bg-gray-600 hover:bg-gray-500'}"
               aria-label="Go to slide {i + 1}"
             ></button>
           {/each}

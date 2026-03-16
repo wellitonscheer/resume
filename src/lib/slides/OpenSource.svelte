@@ -1,6 +1,6 @@
 <section>
   <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-1">Open Source</h2>
-  <div class="w-8 h-0.5 bg-blue-500 rounded mb-5"></div>
+  <div class="w-8 h-0.5 bg-[var(--accent-amber-bright)] rounded mb-5"></div>
 
   <div class="bg-[#3a322c]/40 rounded-lg p-5 border border-[#4a3f37]/50">
     <div class="flex items-start justify-between gap-3 mb-3">
