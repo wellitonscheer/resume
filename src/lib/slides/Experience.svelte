@@ -8,13 +8,10 @@
       <p class="text-sm text-[var(--accent-teal-80)] mb-1">Setrem &mdash; Sociedade Educacional Três de Maio</p>
       <span class="inline-block text-xs text-gray-400 bg-[#4a3f37]/50 px-2 py-0.5 rounded mb-3">Oct 2023 – Present · ~2 yrs 5 mos</span>
       <ul class="list-disc list-inside space-y-1 text-sm text-gray-300 marker:text-gray-600">
-        <li>Built an event management platform for ~1,000 users that replaced paper-based evaluations. Professors now score projects digitally and results go out faster with no manual data entry</li>
-        <li>Built an online enrollment system so students no longer submit documents in person. The full process from submission to approval happens online, connected to the school's primary system for subject selection</li>
-        <li>Set up queue-based email delivery with RabbitMQ (zero lost notifications) and containerized all services with Docker. Any failed service comes back with a single command</li>
-        <li>Found a form-save flow that deleted and reinserted entire records on every save. Replaced it with partial PATCH updates: ~95% smaller payloads, ~80% fewer DB writes, and no more data inconsistency bugs</li>
-        <li>Added semantic search to a support ticket system with vector embeddings (PgVector, Go). Users can now describe problems in plain language and find relevant tickets instead of guessing exact keywords</li>
-        <li>Automated educational report writing with n8n and Claude AI. Professors email their evaluation notes and receive formatted reports. This replaced a paid manual process that cost hundreds of hours per semester</li>
-        <li>Migrated 40+ repositories from self-hosted Gitea to GitHub with a custom Bash script. Shut down the internal Gitea server afterward</li>
+        <li>Built an event management platform for ~1,000 users that replaced paper-based evaluations. Containerized with Docker and deployed with RabbitMQ for queue-based email delivery</li>
+        <li>Found a form-save flow that deleted and reinserted entire records on every save. Replaced it with partial PATCH updates: ~95% smaller payloads, ~80% fewer DB writes</li>
+        <li>Added semantic search to a support ticket system with vector embeddings (PgVector, Go). Users describe problems in plain language instead of guessing exact keywords</li>
+        <li>Automated educational report writing with n8n and Claude AI. Professors email evaluation notes and receive formatted reports, replacing a manual process that cost hundreds of hours per semester</li>
       </ul>
       <div class="flex flex-wrap gap-1.5 mt-3">
         {#each ['Go', 'TypeScript', 'Next.js', 'PostgreSQL', 'RabbitMQ', 'Docker', 'n8n', 'PgVector'] as tech}

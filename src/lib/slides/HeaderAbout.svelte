@@ -56,13 +56,9 @@
     <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-1">About</h2>
     <div class="w-8 h-0.5 bg-[var(--accent-amber-bright)] rounded mb-4"></div>
     <p class="text-gray-300 leading-relaxed text-[0.9375rem]">
-      Full-stack developer focused on building tools that replace manual processes and save time.
-      At Setrem, I built platforms used by ~1,000 people: an event system that moved evaluations
-      from paper to digital, an AI report writer for professors, and an online enrollment portal.
-      I work mostly with Go and TypeScript on backend services, with experience in
-      microservices, message queues, PostgreSQL, Docker, and AI integration (vector search, RAG, Claude API).
-      I also found and fixed a bug in an open source library I use.
-      Currently studying Database Technology with a focus on Data Analytics.
+      Full-stack developer focused on Go and TypeScript backend services.
+      ~3 years building internal tools, APIs, and automations at an educational institution.
+      Currently studying Database Technology at PUCRS.
     </p>
   </section>
 </div>

@@ -10,10 +10,10 @@
       </div>
       <p class="text-sm text-gray-300">Database Technology (CST)</p>
       <p class="text-xs text-gray-500 mt-1">Data Analytics emphasis</p>
-      <ul class="list-disc list-inside mt-2 text-sm text-gray-300 marker:text-gray-600">
-        <li>Data & AI: Python, NumPy, Matplotlib, Power BI, Machine Learning, Statistics</li>
-        <li>Development: SQL, NoSQL (MongoDB, Neo4j), OOP, Software Engineering</li>
-        <li>Business: Business Intelligence (OLAP), Data Warehousing, Data Storytelling</li>
+      <ul class="text-xs text-gray-400 mt-2 space-y-0.5 list-none">
+        <li><span class="text-gray-500">Data & AI:</span> Python, Machine Learning, Statistics, Power BI</li>
+        <li><span class="text-gray-500">Databases:</span> SQL, NoSQL (MongoDB, Neo4j), Data Warehousing</li>
+        <li><span class="text-gray-500">Development:</span> OOP, Software Engineering</li>
       </ul>
     </div>
 
@@ -23,10 +23,10 @@
         <span class="inline-block text-xs text-gray-400 bg-[#4a3f37]/50 px-2 py-0.5 rounded shrink-0">Feb 2021 – May 2025</span>
       </div>
       <p class="text-sm text-gray-300">Technical Education, Computer Science</p>
-      <ul class="list-disc list-inside mt-2 text-sm text-gray-300 marker:text-gray-600">
-        <li>Hardware & Infrastructure: Arduino/IoT, Windows Server, Networking, Office 365</li>
-        <li>Web & Mobile: React, Next.js, PHP, JavaScript, Bootstrap, Flutter, Firebase</li>
-        <li>Backend & Data: REST APIs (ASP.NET), SQL, MySQL, Relational Databases</li>
+      <ul class="text-xs text-gray-400 mt-2 space-y-0.5 list-none">
+        <li><span class="text-gray-500">Web & Mobile:</span> React, Next.js, JavaScript, Flutter</li>
+        <li><span class="text-gray-500">Backend:</span> REST APIs, SQL, MySQL</li>
+        <li><span class="text-gray-500">Infrastructure:</span> Networking, AWS, Windows Server, IoT</li>
       </ul>
     </div>
   </div>

@@ -61,13 +61,9 @@
 % ---- Summary ----
 \section{Summary}
 
-Full-stack developer focused on building tools that replace manual processes and save time.
-At Setrem, built platforms used by \texttildelow 1,000 people: an event system that moved evaluations
-from paper to digital, an AI report writer for professors, and an online enrollment portal.
-Works mostly with Go and TypeScript on backend services, with experience in microservices,
-message queues, PostgreSQL, Docker, and AI integration (vector search, RAG, Claude API).
-Also found and fixed a bug in an open source library. Currently studying Database Technology
-with a focus on Data Analytics.
+Full-stack developer focused on Go and TypeScript backend services. \texttildelow 3 years building
+internal tools, APIs, and automations at an educational institution.
+Currently studying Database Technology at PUCRS.
 
 % ---- Experience ----
 \section{Experience}
@@ -75,13 +71,10 @@ with a focus on Data Analytics.
 \textbf{Full Stack Developer --- Setrem} \hfill {\small Oct 2023 -- Present · \texttildelow 2 yrs 5 mos} \\
 {\small\color{muted} Sociedade Educacional Três de Maio}
 \begin{itemize}
-  \item Built an event management platform for \texttildelow 1,000 users that replaced paper-based evaluations. Professors now score projects digitally and results go out faster with no manual data entry
-  \item Built an online enrollment system so students no longer submit documents in person. The full process from submission to approval happens online, connected to the school's primary system for subject selection
-  \item Set up queue-based email delivery with RabbitMQ (zero lost notifications) and containerized all services with Docker. Any failed service comes back with a single command
-  \item Found a form-save flow that deleted and reinserted entire records on every save. Replaced it with partial PATCH updates: \texttildelow 95\% smaller payloads, \texttildelow 80\% fewer DB writes, and no more data inconsistency bugs
-  \item Added semantic search to a support ticket system with vector embeddings (PgVector, Go). Users can now describe problems in plain language and find relevant tickets instead of guessing exact keywords
-  \item Automated educational report writing with n8n and Claude AI. Professors email their evaluation notes and receive formatted reports. This replaced a paid manual process that cost hundreds of hours per semester
-  \item Migrated 40+ repositories from self-hosted Gitea to GitHub with a custom Bash script. Shut down the internal Gitea server afterward
+  \item Built an event management platform for \texttildelow 1,000 users that replaced paper-based evaluations. Containerized with Docker and deployed with RabbitMQ for queue-based email delivery
+  \item Found a form-save flow that deleted and reinserted entire records on every save. Replaced it with partial PATCH updates: \texttildelow 95\% smaller payloads, \texttildelow 80\% fewer DB writes
+  \item Added semantic search to a support ticket system with vector embeddings (PgVector, Go). Users describe problems in plain language instead of guessing exact keywords
+  \item Automated educational report writing with n8n and Claude AI. Professors email evaluation notes and receive formatted reports, replacing a manual process that cost hundreds of hours per semester
 \end{itemize}
 
 \vspace{0.3em}
@@ -118,42 +111,16 @@ and get relevant matches, even without exact keywords. Built to replace a keywor
 that missed most results. \\
 {\small\color{muted} Go · Gin · PostgreSQL · PgVector · Docker}
 
-\vspace{0.3em}
-\textbf{Gera Parecer} {\small\color{muted} (company project)} \\
-Educational report generator using Claude AI. Teachers enter their evaluation notes and receive
-properly formatted reports. \\
-{\small\color{muted} Go · React · PostgreSQL · Claude API · n8n}
-
-\vspace{0.3em}
-\textbf{Proxy Pagamentos} {\small\color{muted} (company project)} \\
-Payment gateway proxy between multiple institutional systems and their payment provider
-(\texttildelow 1,000 users). Handles transactions, cross-project billing, and subscriptions. \\
-{\small\color{muted} TypeScript · PostgreSQL · RabbitMQ · AWS · Docker · Turborepo}
-
-\vspace{0.3em}
-\textbf{Setrem Eventos} {\small\color{muted} (company project)} \\
-Event management platform for \texttildelow 1,000 users at an educational institution. Moved the entire
-project evaluation process from paper to digital: registrations, submissions, scoring, payments,
-certificates, and admin dashboards. CloudWatch logging for quick diagnosis of production issues. \\
-{\small\color{muted} Next.js · TypeScript · PostgreSQL · RabbitMQ · Docker · Prisma · Turborepo · CloudWatch}
-
-\vspace{0.3em}
-\textbf{Setrem Matrículas} {\small\color{muted} (company project)} \\
-Online enrollment system that replaced in-person document submission. The entire flow from submission
-to approval now happens online. Connected to the school's primary system for subject selection
-and scheduling. \\
-{\small\color{muted} Next.js · TypeScript · PostgreSQL}
-
 
 
 % ---- Technologies ----
 \section{Technologies}
 
 \begin{tabular}{@{} l l}
-  \textbf{Languages:} & Go · TypeScript · C\# · Python · JavaScript · Bash \\
-  \textbf{Frameworks:} & Next.js · React · Gin · HTMX · Tailwind CSS \\
-  \textbf{Databases:} & PostgreSQL · DynamoDB · Firebase · Prisma · PgVector \\
-  \textbf{Tools \& Infra:} & Linux · Docker · Git · GitHub Actions · AWS (Lambda · S3) · Traefik · Cloudflare Workers \\
+  \textbf{Languages:} & Go · TypeScript · Python · JavaScript · Bash \\
+  \textbf{Frameworks:} & Gin · Next.js · React · Tailwind CSS \\
+  \textbf{Databases:} & PostgreSQL · DynamoDB · Prisma · PgVector \\
+  \textbf{Tools \& Infra:} & Linux · Docker · Git · GitHub Actions · AWS (Lambda · S3) · Traefik \\
   \textbf{Services:} & RabbitMQ · N8N · Stripe \\
   \textbf{Other:} & RAG systems · Vector embeddings · Semantic search \\
 \end{tabular}
@@ -164,18 +131,18 @@ and scheduling. \\
 \textbf{PUCRS} \hfill {\small Feb 2025 -- Jul 2027} \\
 {\small Database Technology (CST) --- Data Analytics emphasis}
 \begin{itemize}
-  \item Data \& AI: Python, NumPy, Matplotlib, Power BI, Machine Learning, Statistics
-  \item Development: SQL, NoSQL (MongoDB, Neo4j), OOP, Software Engineering
-  \item Business: Business Intelligence (OLAP), Data Warehousing, Data Storytelling
+  \item Data \& AI: Python, Machine Learning, Statistics, Power BI
+  \item Databases: SQL, NoSQL (MongoDB, Neo4j), Data Warehousing
+  \item Development: OOP, Software Engineering
 \end{itemize}
 
 \vspace{0.3em}
 \textbf{Setrem} \hfill {\small Feb 2021 -- May 2025} \\
 {\small Technical Education, Computer Science}
 \begin{itemize}
-  \item Hardware \& Infrastructure: Arduino/IoT, Windows Server, Networking, Office 365
-  \item Web \& Mobile: React, Next.js, PHP, JavaScript, Bootstrap, Flutter, Firebase
-  \item Backend \& Data: REST APIs (ASP.NET), SQL, MySQL, Relational Databases
+  \item Web \& Mobile: React, Next.js, JavaScript, Flutter
+  \item Backend: REST APIs, SQL, MySQL
+  \item Infrastructure: Networking, AWS, Windows Server, IoT
 \end{itemize}
 
 \end{document}
