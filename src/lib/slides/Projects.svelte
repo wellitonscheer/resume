@@ -12,7 +12,7 @@
         </a>
       </div>
       <p class="text-sm text-gray-300 mb-3">
-        AI-powered support ticket search tool — users describe issues in natural language and find similar tickets through vector embeddings and semantic search, even without knowing the exact keywords. Built to replace a slow, content-blind search system.
+        Support ticket search tool using vector embeddings. Users describe their issue in plain language and get relevant matches, even without exact keywords. Built to replace a keyword-only search that missed most results.
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Go</span>
@@ -29,7 +29,7 @@
         <span class="inline-flex items-center shrink-0 bg-[var(--accent-teal-15)] text-[var(--accent-teal)] px-2.5 py-1 rounded-full text-xs">company</span>
       </div>
       <p class="text-sm text-gray-300 mb-3">
-        AI-powered educational report generator — teachers input diagnostic observations and receive properly formatted evaluation reports using Claude AI.
+        Educational report generator using Claude AI. Teachers enter their evaluation notes and receive properly formatted reports.
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Go</span>
@@ -46,7 +46,7 @@
         <span class="inline-flex items-center shrink-0 bg-[var(--accent-teal-15)] text-[var(--accent-teal)] px-2.5 py-1 rounded-full text-xs">company</span>
       </div>
       <p class="text-sm text-gray-300 mb-3">
-        Payment gateway proxy handling transactions for multiple institutional systems (~1,000 users). Centralizes payment processing, organizes multi-project billing, and manages subscriptions.
+        Payment gateway proxy between multiple institutional systems and their payment provider (~1,000 users). Handles transactions, cross-project billing, and subscriptions.
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">TypeScript</span>
@@ -64,7 +64,7 @@
         <span class="inline-flex items-center shrink-0 bg-[var(--accent-teal-15)] text-[var(--accent-teal)] px-2.5 py-1 rounded-full text-xs">company</span>
       </div>
       <p class="text-sm text-gray-300 mb-3">
-        Event management platform for ~1,000 users across an educational institution. Replaced paper-based project evaluation with a digital system — handles registrations, project submissions, evaluator scoring, payments, certificate generation, and admin dashboards. Integrated CloudWatch logging for quick diagnosis of user-facing issues.
+        Event management platform for ~1,000 users at an educational institution. Moved the entire project evaluation process from paper to digital: registrations, submissions, scoring, payments, certificates, and admin dashboards. CloudWatch logging for quick diagnosis of production issues.
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>
@@ -84,7 +84,7 @@
         <span class="inline-flex items-center shrink-0 bg-[var(--accent-teal-15)] text-[var(--accent-teal)] px-2.5 py-1 rounded-full text-xs">company</span>
       </div>
       <p class="text-sm text-gray-300 mb-3">
-        Online student enrollment system that eliminated in-person document submission. Staff review documents, request corrections, and approve enrollments online — connected to the school's primary system for subject selection and scheduling.
+        Online enrollment system that replaced in-person document submission. The entire flow from submission to approval now happens online. Connected to the school's primary system for subject selection and scheduling.
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="bg-[#3a322c] text-gray-300 px-2 py-0.5 rounded text-xs">Next.js</span>

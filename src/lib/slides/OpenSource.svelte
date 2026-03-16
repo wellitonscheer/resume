@@ -12,8 +12,8 @@
     </div>
     <p class="text-sm text-gray-300 leading-relaxed">
       While using the cobra package in a Go project, I ran into a confusing error message from pflag.
-      Dug into the source to understand what was going on and found the bug — the error was
-      referencing the wrong flag type. Opened a PR with the fix and it got merged.
+      Dug into the source, found the bug: the error was referencing the wrong flag type.
+      Opened a PR with the fix and it got merged.
     </p>
   </div>
 </section>

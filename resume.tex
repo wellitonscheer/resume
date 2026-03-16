@@ -62,11 +62,12 @@
 \section{Summary}
 
 Full-stack developer focused on building tools that replace manual processes and save time.
-At Setrem, built platforms used by \texttildelow 1,000 people --- digitizing paper-based evaluations,
-automating report writing with AI, and enabling online enrollment.
+At Setrem, built platforms used by \texttildelow 1,000 people: an event system that moved evaluations
+from paper to digital, an AI report writer for professors, and an online enrollment portal.
 Works mostly with Go and TypeScript on backend services, with experience in microservices,
 message queues, PostgreSQL, Docker, and AI integration (vector search, RAG, Claude API).
-Open-source contributor. Currently studying Database Technology with a focus on Data Analytics.
+Also found and fixed a bug in an open source library. Currently studying Database Technology
+with a focus on Data Analytics.
 
 % ---- Experience ----
 \section{Experience}
@@ -74,21 +75,21 @@ Open-source contributor. Currently studying Database Technology with a focus on 
 \textbf{Full Stack Developer --- Setrem} \hfill {\small Oct 2023 -- Present · \texttildelow 2 yrs 5 mos} \\
 {\small\color{muted} Sociedade Educacional Três de Maio}
 \begin{itemize}
-  \item Built an event management platform for \texttildelow 1,000 users, replacing a paper-based evaluation process --- professors now score projects digitally, eliminating manual data migration and accelerating result delivery
-  \item Built an online enrollment system that replaced in-person document submission --- staff review, request changes, and process enrollments entirely online, connected to the school's primary system for subject selection
-  \item Designed queue-based email delivery with RabbitMQ ensuring zero lost notifications, and containerized all services with Docker for rapid failure recovery and one-command redeployment
-  \item Replaced a delete-and-reinsert form-save pattern with partial PATCH updates --- reduced payload by \texttildelow 95\%, cut unnecessary DB writes by \texttildelow 80\%, and eliminated data inconsistency risks
-  \item Integrated semantic search into a support ticket system using vector embeddings (PgVector, Go) --- replaced a slow, content-blind manual search with natural-language queries
-  \item Automated educational report writing with n8n and AI --- professors send evaluation notes via email and receive properly formatted reports, replacing a paid manual process
-  \item Migrated 40+ repositories from self-hosted Gitea to GitHub with a custom Bash script, decommissioning an internal server and freeing infrastructure resources
+  \item Built an event management platform for \texttildelow 1,000 users that replaced paper-based evaluations. Professors now score projects digitally and results go out faster with no manual data entry
+  \item Built an online enrollment system so students no longer submit documents in person. The full process from submission to approval happens online, connected to the school's primary system for subject selection
+  \item Set up queue-based email delivery with RabbitMQ (zero lost notifications) and containerized all services with Docker. Any failed service comes back with a single command
+  \item Found a form-save flow that deleted and reinserted entire records on every save. Replaced it with partial PATCH updates: \texttildelow 95\% smaller payloads, \texttildelow 80\% fewer DB writes, and no more data inconsistency bugs
+  \item Added semantic search to a support ticket system with vector embeddings (PgVector, Go). Users can now describe problems in plain language and find relevant tickets instead of guessing exact keywords
+  \item Automated educational report writing with n8n and Claude AI. Professors email their evaluation notes and receive formatted reports. This replaced a paid manual process that cost hundreds of hours per semester
+  \item Migrated 40+ repositories from self-hosted Gitea to GitHub with a custom Bash script. Shut down the internal Gitea server afterward
 \end{itemize}
 
 \vspace{0.3em}
 \textbf{Software Developer --- A1 Lab} \hfill {\small Nov 2022 -- Oct 2023 · 1 yr} \\
 {\small\color{muted} Freelance · Remote}
 \begin{itemize}
-  \item Built serverless API services for a gym platform --- handled nearest-gym matching and privacy-preserving location randomization for user safety
-  \item Implemented a DynamoDB caching layer that cut API response time from \texttildelow 1.5\,s to \texttildelow 300\,ms by eliminating redundant third-party calls
+  \item Built serverless API services for a gym platform. Handled nearest-gym matching and randomized user locations to protect privacy
+  \item Implemented a DynamoDB caching layer that cut API response time from \texttildelow 1.5\,s to \texttildelow 300\,ms by removing redundant third-party calls
 \end{itemize}
 
 \vspace{0.3em}
@@ -104,44 +105,43 @@ Open-source contributor. Currently studying Database Technology with a focus on 
 \textbf{spf13/pflag --- Fix getFlagType error message}
 \hfill \href{https://github.com/spf13/pflag/pull/462}{\small PR \#462} \\
 While using the cobra package in a Go project, I ran into a confusing error message from pflag.
-Dug into the source to understand what was going on and found the bug --- the error was
-referencing the wrong flag type. Opened a PR with the fix and it got merged.
+Dug into the source, found the bug: the error was referencing the wrong flag type. Opened a PR
+with the fix and it got merged.
 
 % ---- Projects ----
 \section{Projects}
 
 \textbf{Ticket Helper}
 \hfill \href{https://github.com/wellitonscheer/ticket-helper}{\small github} \\
-AI-powered support ticket search tool --- users describe issues in natural language and find similar tickets
-through vector embeddings and semantic search, even without knowing the exact keywords.
-Built to replace a slow, content-blind search system. \\
+Support ticket search tool using vector embeddings. Users describe their issue in plain language
+and get relevant matches, even without exact keywords. Built to replace a keyword-only search
+that missed most results. \\
 {\small\color{muted} Go · Gin · PostgreSQL · PgVector · Docker}
 
 \vspace{0.3em}
 \textbf{Gera Parecer} {\small\color{muted} (company project)} \\
-AI-powered educational report generator --- teachers input diagnostic observations and receive properly
-formatted evaluation reports using Claude AI. \\
+Educational report generator using Claude AI. Teachers enter their evaluation notes and receive
+properly formatted reports. \\
 {\small\color{muted} Go · React · PostgreSQL · Claude API · n8n}
 
 \vspace{0.3em}
 \textbf{Proxy Pagamentos} {\small\color{muted} (company project)} \\
-Payment gateway proxy handling transactions for multiple institutional systems (\texttildelow 1,000 users).
-Centralizes payment processing, organizes multi-project billing, and manages subscriptions. \\
+Payment gateway proxy between multiple institutional systems and their payment provider
+(\texttildelow 1,000 users). Handles transactions, cross-project billing, and subscriptions. \\
 {\small\color{muted} TypeScript · PostgreSQL · RabbitMQ · AWS · Docker · Turborepo}
 
 \vspace{0.3em}
 \textbf{Setrem Eventos} {\small\color{muted} (company project)} \\
-Event management platform for \texttildelow 1,000 users across an educational institution. Replaced paper-based
-project evaluation with a digital system --- handles registrations, project submissions, evaluator scoring,
-payments, certificate generation, and admin dashboards.
-Integrated CloudWatch logging for quick diagnosis of user-facing issues. \\
+Event management platform for \texttildelow 1,000 users at an educational institution. Moved the entire
+project evaluation process from paper to digital: registrations, submissions, scoring, payments,
+certificates, and admin dashboards. CloudWatch logging for quick diagnosis of production issues. \\
 {\small\color{muted} Next.js · TypeScript · PostgreSQL · RabbitMQ · Docker · Prisma · Turborepo · CloudWatch}
 
 \vspace{0.3em}
 \textbf{Setrem Matrículas} {\small\color{muted} (company project)} \\
-Online student enrollment system that eliminated in-person document submission. Staff review documents,
-request corrections, and approve enrollments online --- connected to the school's primary system for
-subject selection and scheduling. \\
+Online enrollment system that replaced in-person document submission. The entire flow from submission
+to approval now happens online. Connected to the school's primary system for subject selection
+and scheduling. \\
 {\small\color{muted} Next.js · TypeScript · PostgreSQL}
 
 

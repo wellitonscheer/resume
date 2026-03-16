@@ -57,11 +57,11 @@
     <div class="w-8 h-0.5 bg-[var(--accent-amber-bright)] rounded mb-4"></div>
     <p class="text-gray-300 leading-relaxed text-[0.9375rem]">
       Full-stack developer focused on building tools that replace manual processes and save time.
-      At Setrem, I built platforms used by ~1,000 people — digitizing paper-based evaluations,
-      automating report writing with AI, and enabling online enrollment.
-      I work mostly with Go and TypeScript on backend services, and have experience with
+      At Setrem, I built platforms used by ~1,000 people: an event system that moved evaluations
+      from paper to digital, an AI report writer for professors, and an online enrollment portal.
+      I work mostly with Go and TypeScript on backend services, with experience in
       microservices, message queues, PostgreSQL, Docker, and AI integration (vector search, RAG, Claude API).
-      When I hit a bug in a library I was using, I dug into the source code and contributed a fix upstream.
+      I also found and fixed a bug in an open source library I use.
       Currently studying Database Technology with a focus on Data Analytics.
     </p>
   </section>
